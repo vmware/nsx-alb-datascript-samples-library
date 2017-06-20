@@ -1,26 +1,35 @@
 # HTTP Host Switching
 
-Load balance URIs to different pools.  This functionality can also
-be performed using an HTTP Class instead of an iRule.
-Desired URI to pool mapping:
-http://www.foo.com/development/ --> Pool 1
-http://www.foo.com/marketing/   --> Pool 2
-http://www.foo.com/support/     --> Pool 3
+Load balance to different pools based on the host name the client is trying to access.  This allows a single IP address (and virtual server) to host numerous web sites.
 
-## F5 Host IP Switching
+## F5 HTTP Host Switching
+
 ```
 when HTTP_REQUEST {
-  if {[HTTP::uri] starts_with "/development" } {
-    pool pool_development
-  } elseif {[HTTP::uri] starts_with "/marketing" } {
-    pool pool_marketing
-  } elseif {[HTTP::uri] starts_with "/support" } {
-    pool pool_support
-  }
-    else {
-    discard
-  }
+  switch [HTTP::host] {
+    "site1.company.com" { pool Site1_Pool }
+    "site2.company.com" { pool Site2_Pool }
+    "site3.company.com" { pool Site3_Pool }
+    "site4.company.com" { pool Site4_Pool }
+    "default" { pool Default_Pool }
+   }
 }
 ```
 
-## Avi Host IP Switching
+## Avi HTTP Host Switching
+
+```
+host = avi.http.hostname()
+
+if host == "site1.company.com" then
+  avi.pool.select("Site1_Pool")
+elseif host == "site2.company.com" then
+  avi.pool.select("Site2_Pool")
+elseif host == "site3.company.com" then
+  avi.pool.select("Site3_Pool")
+elseif host == "site4.company.com" then
+  avi.pool.select("Site4_Pool")
+else
+  avi.pool.select("Default_Pool")
+end
+```

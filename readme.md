@@ -1,6 +1,10 @@
 # Datascript Examples
 
-
+**Availability**
+[HTTP Host Switching](availability/host_switching.md)
+[HTTP URI Switching - Simple](availability/uri_switching.md)
+[HTTP URI Switching - Advanced](availability/uri_switching2.md)
+[HTTP IP Switching](availability/ip_switching.md)
 
 
 ### Port Redirects
