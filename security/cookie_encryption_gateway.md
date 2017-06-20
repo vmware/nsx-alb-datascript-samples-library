@@ -31,10 +31,11 @@ when HTTP_RESPONSE {
 Apply this to the "HTTP Request" Event
 
 ```
+key = 234LJKH43J3H4K6KJH77H234
 cookies, count = avi.http.get_cookie_names()
+
 if count > 0 then
   for cookie_num = 1, #cookies do
-    key = 234LJKH43J3H4K6KJH77H234
     cookie_name = cookies[cookie_num]
     cookie_data = avi.http.get_cookie(cookie_name)
     decrypt = avi.crypto.decrypt(cookie_data, key)
@@ -46,10 +47,11 @@ end
 Apply this to the "HTTP Response" Event
 
 ```
+key = 234LJKH43J3H4K6KJH77H234
 cookies, count = avi.http.get_cookie_names()
+
 if count > 0 then
   for cookie_num = 1, #cookies do
-    key = 234LJKH43J3H4K6KJH77H234
     cookie_name = cookies[cookie_num]
     cookie_data = avi.http.get_cookie(cookie_name)
     encrypt = avi.crypto.encrypt(cookie_data, key)
