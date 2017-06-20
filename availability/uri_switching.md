@@ -34,5 +34,7 @@ elseif avi.http.get_path() = "/marketing" then
   avi.pool.select("pool_marketing")
 elseif avi.http.get_path() = "/support" then
   avi.pool.select("pool_support")
+else
+  avi.http.close_conn()
 end
 ```

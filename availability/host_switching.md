@@ -1,5 +1,3 @@
-
-
 # HTTP Host Switching
 
 Load balance URIs to different pools.  This functionality can also
