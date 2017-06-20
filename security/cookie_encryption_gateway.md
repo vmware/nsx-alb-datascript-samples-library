@@ -27,21 +27,6 @@ when HTTP_RESPONSE {
 
 # Avi Cookie Encryption Gateway
 
-
-```
-content = avi.http.get_path()
-file_types = {".gif", ".jpg", ".png", ".ico", ".css"}
-
-for typeCount = 1, #file_types do
-  if string.endswith(content, file_types[typeCount]) then
-    avi.pool.select("Cache_Servers")
-  else
-    avi.pool.select("App_Servers")
-  end
-end
-```
-
-
 Apply this to the "HTTP Request" Event
 
 ```
