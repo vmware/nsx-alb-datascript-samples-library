@@ -3,7 +3,7 @@
 Load balance requests to different pools based on the type of content.
 
 ## F5 HTTP URI Switching
-
+```
 class Static_Content {
   ".gif"
   ".jpg"
@@ -18,7 +18,7 @@ when HTTP_REQUEST {
   }
   pool App_Servers
 }
-
+```
 
 ## Avi HTTP URI Switching
 
