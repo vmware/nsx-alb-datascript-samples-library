@@ -11,8 +11,8 @@
 ## Security
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  
 [Client Cert check](security/client_cert_check.md)  
-[Log SSL Version](log_ssl_version.md)  
-
+[Log SSL Version](security/log_ssl_version.md)  
+[Close Connections without Host](security/close_connection_without_host.md)
 
 ### Bot corral
 ```
