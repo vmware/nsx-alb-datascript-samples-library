@@ -13,6 +13,8 @@
 [Client Cert check](security/client_cert_check.md)  
 [Log SSL Version](security/log_ssl_version.md)  
 [Close Connections without Host](security/close_connection_without_host.md)
+[Cookie Encryption Gateway](security/cookie_encryption_gateway.md)
+
 
 ### Bot corral
 ```
