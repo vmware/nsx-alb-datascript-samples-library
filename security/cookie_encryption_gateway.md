@@ -24,6 +24,7 @@ when HTTP_RESPONSE {
     HTTP::cookie encrypt $cookieName ::passphrase
   }
 }
+```
 
 # Avi Cookie Encryption Gateway
 
