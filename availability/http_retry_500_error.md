@@ -1,8 +1,8 @@
-# Retry 500 Errors
+# HTTP Retry 500 Errors
 
 Don't send 500 errors (server busy) to the client.  Instead try the next server.  After 4 consecutive failed attempts, send the 500 error.  LTM version 9.2 and later can do this without the redirect, instead using the LB::reselect command.
 
-## F5 Retry 500 Errors
+## F5 HTTP Retry 500 Errors
 
 ```
 when HTTP_REQUEST {
@@ -26,7 +26,7 @@ when HTTP_RESPONSE {
 }
 ```
 
-## Avi Retry 500 Errors
+## Avi HTTP Retry 500 Errors
 
 ### GUI
 1. Go to the pool.

@@ -7,6 +7,7 @@
 [HTTP URI Switching - Advanced](availability/uri_switching2.md)  
 [HTTP IP Switching](availability/ip_switching.md)  
 [JSessionID Persistence](availability/jsessionid_persistence.md)  
+[HTTP Retry 500 Errors](availability/http_retry_500_error.md)
 
 ## Security
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  
