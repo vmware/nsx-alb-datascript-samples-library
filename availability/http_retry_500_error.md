@@ -28,12 +28,4 @@ when HTTP_RESPONSE {
 
 ## Avi HTTP Retry 500 Errors
 
-### GUI
-1. Go to the pool.
-2. Advanced Settings > Other Settings, Check Mark "HTTP Server Reselect"
-3. Insert "HTTP Response codes" to initiate Server reselect
-4. Insert the "Number of Retries"
-
-### Datascript
-
-Not available at this time.
+Please refer to https://kb.avinetworks.com/docs/latest/http-server-reselect/
