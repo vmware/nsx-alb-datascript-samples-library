@@ -31,7 +31,7 @@ Because Avi doesn't have a class matching function, we can instead make use of t
 3. Use the following Datascript in your request event.
 ```
 clientIP = avi.vs.client()
-if avi.ipgroup.containers("Internal", clientIP) then
+if avi.ipgroup.contains("Internal", clientIP) then
   avi.pool.select("internal_pool")
 else
   avi.pool.select("external_pool")
