@@ -21,15 +21,10 @@ when HTTP_REQUEST {
 ```
 host = avi.http.hostname()
 
-if host == "site1.company.com" then
-  avi.pool.select("Site1_Pool")
-elseif host == "site2.company.com" then
-  avi.pool.select("Site2_Pool")
-elseif host == "site3.company.com" then
-  avi.pool.select("Site3_Pool")
-elseif host == "site4.company.com" then
-  avi.pool.select("Site4_Pool")
-else
-  avi.pool.select("Default_Pool")
+if host == "site1.company.com" then avi.pool.select("Site1_Pool")
+elseif host == "site2.company.com" then avi.pool.select("Site2_Pool")
+elseif host == "site3.company.com" then avi.pool.select("Site3_Pool")
+elseif host == "site4.company.com" then avi.pool.select("Site4_Pool")
+else avi.pool.select("Default_Pool")
 end
 ```
