@@ -8,9 +8,9 @@
 [HTTP IP Switching](availability/ip_switching.md)  
 [JSessionID Persistence](availability/jsessionid_persistence.md)  
 [HTTP Retry 500 Errors](availability/http_retry_500_error.md)
-[Fall back to secondary pool if all primary pool servers are down, display custom maintenance page if both pools are down](availability/fall_back_to_secondary_pool_if_primary_pool_is_down_display_maint_page.md)
+[Fall back to secondary pool or custom maintenance page](availability/fall_back_to_secondary_pool_if_primary_pool_is_down_display_maint_page.md)
 [Load Balancing during Maintenance Window](availability/load_balancing_during_maintenance.md)
-[Rewrite HTTP Redirect Port] (availability/rewrite_http_redirect_port.md)
+[Rewrite HTTP Redirect Port](availability/rewrite_http_redirect_port.md)
 
 ## Security
 
