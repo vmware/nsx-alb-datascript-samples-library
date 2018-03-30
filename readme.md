@@ -22,6 +22,7 @@
 [Header Insertion for Content Security](security/header_insertion_for_content_security.md)  
 [Remove X-* and Server Headers from Response](security/remove_x_headers_from_http_resp.md)  
 [X-Client-IP allow requests from range of IPs](security/x_client_allow_request_from_range_of_ips.md)  
+[Blacklist Specific URIs using String Group](security/blacklist_specific_uris_using_stringgroup.md)  
 
 ## Misc
 
