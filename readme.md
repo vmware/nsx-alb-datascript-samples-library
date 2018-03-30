@@ -7,10 +7,10 @@
 [HTTP URI Switching - Advanced](availability/uri_switching2.md)  
 [HTTP IP Switching](availability/ip_switching.md)  
 [JSessionID Persistence](availability/jsessionid_persistence.md)  
-[HTTP Retry 500 Errors](availability/http_retry_500_error.md)
-[Fall back to secondary pool or custom maintenance page](availability/fall_back_to_secondary_pool_if_primary_pool_is_down_display_maint_page.md)
-[Load Balancing during Maintenance Window](availability/load_balancing_during_maintenance.md)
-[Rewrite HTTP Redirect Port](availability/rewrite_http_redirect_port.md)
+[HTTP Retry 500 Errors](availability/http_retry_500_error.md)  
+[Fall back to secondary pool or custom maintenance page](availability/fall_back_to_secondary_pool_if_primary_pool_is_down_display_maint_page.md)  
+[Load Balancing during Maintenance Window](availability/load_balancing_during_maintenance.md)  
+[Rewrite HTTP Redirect Port](availability/rewrite_http_redirect_port.md)  
 
 ## Security
 
@@ -18,10 +18,10 @@
 [Client Cert check](security/client_cert_check.md)  
 [Log SSL Version](security/log_ssl_version.md)  
 [Close Connections without Host](security/close_connection_without_host.md)  
-[Cookie Encryption Gateway](security/cookie_encryption_gateway.md)
-[Header Insertion for Content Security](security/header_insertion_for_content_security.md)
-[Remove X-* and Server Headers from Response](security/remove_x_headers_from_http_resp.md)
-[X-Client-IP allow requests from range of IPs](security/x_client_allow_request_from_range_of_ips.md)
+[Cookie Encryption Gateway](security/cookie_encryption_gateway.md)  
+[Header Insertion for Content Security](security/header_insertion_for_content_security.md)  
+[Remove X-* and Server Headers from Response](security/remove_x_headers_from_http_resp.md)  
+[X-Client-IP allow requests from range of IPs](security/x_client_allow_request_from_range_of_ips.md)  
 
 ## Misc
 
