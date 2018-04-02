@@ -36,7 +36,8 @@ end
 In the following we will rename the pool before applying it to a virtual service.
 
 ```
+default_pool = "pool1"
 if avi.http.get_cookie("JSESSIONID") then
-  avi.pool.select(, avi.vs.table_lookup(avi.http.get_cookie("JSESSIONID")))
+  avi.pool.select(default_pool, avi.vs.table_lookup(avi.http.get_cookie("JSESSIONID")))
 end
 ```

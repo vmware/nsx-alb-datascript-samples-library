@@ -1,5 +1,5 @@
-# Fall back to secondary pool if all primary pool servers are down, display custom maintenance page if both pools are down.
-How to perform efficient load balancing during event when primary pool is under maintenance and transparently switch to secondary pool. Apply this to the "HTTP REQUEST" Event, pools has to be selected for datascript.
+# Fall back to secondary pool if all primary pool servers are down, display custom maintenance page if both pools are down
+How to perform efficient load balancing during event when primary pool is under maintenance and transparently switch to secondary pool. Apply this to the "HTTP REQUEST" Event, pools has to be selected for datascript
 
 ```
 primary_pool = "primary_pool"
