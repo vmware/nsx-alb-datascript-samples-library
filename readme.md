@@ -11,7 +11,7 @@
 [Fall back to secondary pool or custom maintenance page](availability/fall_back_to_secondary_pool_if_primary_pool_is_down_display_maint_page.md)  
 [Load Balancing during Maintenance Window](availability/load_balancing_during_maintenance.md)  
 [Rewrite HTTP Redirect Port](availability/rewrite_http_redirect_port.md)  
-[Header Persistence using Akamai True-Client-IP header](availability/header_persistence_akamai_true_client_ip.md  
+[Header Persistence using Akamai True-Client-IP header](availability/header_persistence_akamai_true_client_ip.md)   
 
 
 ## Security
