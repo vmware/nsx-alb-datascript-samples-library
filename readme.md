@@ -11,14 +11,14 @@
 [Fall back to secondary pool or custom maintenance page](availability/fall_back_to_secondary_pool_if_primary_pool_is_down_display_maint_page.md)  
 [Load Balancing during Maintenance Window](availability/load_balancing_during_maintenance.md)  
 [Rewrite HTTP Redirect Port](availability/rewrite_http_redirect_port.md)  
-[Header Persistence using Akamai True-Client-IP header](availability/header_persistence_akamai_true_client_ip.md)   
-
+[Header Persistence using Akamai True-Client-IP header](availability/header_persistence_akamai_true_client_ip.md)  
+[HTTP redirect based on Client location taken from source IP address](availability/http_redirect_based_on_client_country.md)  
 
 ## Security
 
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  
 [Client Cert check](security/client_cert_check.md)  
-[Log SSL Version](security/log_ssl_version.md)  
+[Log SSL Version and block SSLv3.0 or TLSv1.0](security/log_ssl_version.md)  
 [Log HTTP Headers](security/log_http_headers.md)  
 [Close Connections without Host](security/close_connection_without_host.md)  
 [Cookie Encryption Gateway](security/cookie_encryption_gateway.md)  
