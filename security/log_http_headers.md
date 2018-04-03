@@ -1,4 +1,4 @@
-#Log HTTP Headers
+# Log HTTP Headers
 Logging of HTTP headers for enhanced log collection and troubleshooting use cases.
 
 ```

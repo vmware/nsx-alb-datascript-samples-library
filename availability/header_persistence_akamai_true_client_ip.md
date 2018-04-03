@@ -5,7 +5,7 @@ address.	This	header	can	be	used	to	define	persistence	for	real	client	with	the	
 
 Persistence can be easily done through REST/UI/CLI: https://avinetworks.com/docs/17.2/custom-http-header-persistence/ or through Custom Datascript below:
 
-Apply these scripts to the "HTTP REQUEST" & "HTTP RESPONSE" events appropriately , pools has to be selected for datascript.
+Apply these scripts to the "HTTP REQUEST" & "HTTP RESPONSE" events appropriately ,pool has to be selected for datascript.
 
 ```
 -- HTTP_REQUEST
