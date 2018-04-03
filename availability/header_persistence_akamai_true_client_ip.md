@@ -14,13 +14,14 @@ avi.vs.reqvar.true_client_ip =  avi.http.get_header("True-Client-IP")
 -- if header provided
 if avi.vs.reqvar.true_client_ip then
   -- lookup server using value of True-Client-IP for existing mapping in persistence table
-  pinned_server_ip = avi.vs.table_lookup(avi.vs.reqvar.true_client_ip)
+  avi.vs.reqvar.pinned_server_ip = avi.vs.table_lookup(avi.vs.reqvar.true_client_ip)
   -- assumming VS port matches server port
   pinned_server_port = avi.vs.port()
   -- if server found in persistence table and it's up, use already pinned server, if not use default pool
-  if pinned_server_ip and avi.pool.get_server_status(default_pool, pinned_server_ip, pinned_server_port) == 1 then
-    avi.pool.select(default_pool, pinned_server_ip)
+  if avi.vs.reqvar.pinned_server_ip and avi.pool.get_server_status(default_pool, avi.vs.reqvar.pinned_server_ip, pinned_server_port) == 1 then
+    avi.pool.select(default_pool, avi.vs.reqvar.pinned_server_ip)
   else
+    avi.vs.table_remove(avi.vs.reqvar.true_client_ip)
     avi.pool.select(default_pool)
   end
 end
@@ -30,7 +31,12 @@ end
 -- HTTP_RESPONSE
 if avi.vs.reqvar.true_client_ip then
   selected_server_ip = avi.pool.server_ip()
-  -- Add persist for 20 minutes based on True-Client-IP header
-  avi.vs.table_insert(avi.vs.reqvar.true_client_ip, selected_server_ip,1200)
+  if avi.vs.reqvar.pinned_server_ip then
+    -- Update the expire time for a table entry for 20 minutes for active connection i.e. existing persistence entry
+    avi.vs.table_refresh(avi.vs.reqvar.true_client_ip,1200)
+  else
+    -- Create persistence entry for 20 minutes based on True-Client-IP header
+    avi.vs.table_insert(avi.vs.reqvar.true_client_ip, selected_server_ip,1200)
+  end
 end
 ```
