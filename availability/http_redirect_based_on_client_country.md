@@ -1,6 +1,6 @@
 # HTTP redirect based on Client location taken from source IP address.
 
-HTTP redirect based on Client location taken from source IP address. IP groups has be created and mapped to datascript. https://avinetworks.com/docs/17.2/templates-groups-ip-group/, country can be selected vs explicit IP ranges to identify clients. More details: https://avinetworks.com/docs/17.2/geo-location-database/. Apply this to the "HTTP REQUEST" Event and map respected ip groups to datascript.
+HTTP redirect based on Client location taken from source IP address. IP groups has be created and mapped to datascript. https://avinetworks.com/docs/latest/templates-groups-ip-group/, country can be selected vs explicit IP ranges to identify clients. More details: https://avinetworks.com/docs/latest/geo-location-database/. Apply this to the "HTTP REQUEST" Event and map respected ip groups to datascript.
 
 ```
 -- HTTP_REQUEST
