@@ -4,8 +4,9 @@ the	ADC	and	Client/Server.	The	hex	characters	can	be	used	for	different	purposes
 
 ```
 local charset = {}  do
--- [0-9a-f]
+    --[0-9]
     for c = 48, 57  do table.insert(charset, string.char(c)) end
+    --[a-f]
     for c = 97, 102  do table.insert(charset, string.char(c)) end
 end
 
