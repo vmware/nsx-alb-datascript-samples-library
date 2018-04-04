@@ -10,7 +10,6 @@
 [HTTP Retry 500 Errors](availability/http_retry_500_error.md)  
 [Fall back to secondary pool or custom maintenance page](availability/fall_back_to_secondary_pool_if_primary_pool_is_down_display_maint_page.md)  
 [Load Balancing during Maintenance Window](availability/load_balancing_during_maintenance.md)  
-[Rewrite HTTP Redirect Port](availability/rewrite_http_redirect_port.md)  
 [Header Persistence using Akamai True-Client-IP header](availability/header_persistence_akamai_true_client_ip.md)  
 [HTTP redirect based on Client location taken from source IP address](availability/http_redirect_based_on_client_country.md)  
 
@@ -34,7 +33,7 @@
 ```
 ### Custom html response
 ```
-body = "Hostname:" + avi.vs.host()
+body = "Hostname:" + avi.http.hostname()
 avi.http.response( 200, body )
 ```
 ### Location Port Rewrite
