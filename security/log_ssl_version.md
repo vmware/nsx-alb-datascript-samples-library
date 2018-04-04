@@ -1,4 +1,4 @@
-# Log SSL Version/Cipher and block SSLv3.0, TLSv1.0 or cipher suites that don't provide encryption.
+# Log SSL Version/Cipher and block SSLv3.0, TLSv1.0 or cipher suites that don't provide encryption
 Logging of SSL/TLS version for enhanced log collection and troubleshooting use cases. SSLv3 is known to be weak and vulnerable thus ability to track the SSLv3 transaction is important for the administrators. Avi Vantage provides a number of features to help understand the utilization of SSL traffic and troubleshoot SSL-related issues. More details: https://avinetworks.com/docs/latest/ssl-visibility-and-troubleshooting/
 
 OpenSSL cipher suites: https://www.openssl.org/docs/manmaster/man1/ciphers.html
@@ -11,8 +11,8 @@ avi.vs.log(avi.ssl.protocol() .. ":" .. avi.ssl.cipher())
 -- closing connection for SSLv3.0 or TLSv1.0
 if avi.ssl.protocol() == "TLSv1" or avi.ssl.protocol() == "SSLv3.0" then
   avi.http.close_conn()
-  -- Overlaps with https://avinetworks.com/docs/latest/ssl-tls-profile/
-  -- blocking cipher suites that don't provide encryption or DES/3DES cipher suites
+-- blocking cipher suites that don't provide encryption or DES/3DES cipher suites
+-- Overlaps with https://avinetworks.com/docs/latest/ssl-tls-profile/
 elseif string.contains(string.lower(avi.ssl.cipher()),"des") or string.contains(string.lower(avi.ssl.cipher()),"null")  then
   avi.http.close_conn()
 end
