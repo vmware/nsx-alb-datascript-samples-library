@@ -3,7 +3,8 @@
 ## Availability
 
 [HTTP Host Switching](availability/host_switching.md)  
-[HTTP Host Switching using Host Header](availability/host_switching2.md)   
+[HTTP Host Switching using Host Header](availability/host_switching2.md)  
+[HTTP Host Switching using Host Header and String Groups](availability/host_switching3.md)  
 [HTTP URI Switching - Simple](availability/uri_switching.md)  
 [HTTP URI Switching - Advanced](availability/uri_switching2.md)  
 [HTTP IP Switching](availability/ip_switching.md)  
