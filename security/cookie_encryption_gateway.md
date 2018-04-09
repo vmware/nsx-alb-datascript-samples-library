@@ -31,7 +31,7 @@ when HTTP_RESPONSE {
 Apply this to the "HTTP Request" Event
 
 ```
-key = 234LJKH43J3H4K6KJH77H234
+key = "234LJKH43J3H4K6KJH77H234"
 cookies, count = avi.http.get_cookie_names()
 
 if count > 0 then
@@ -47,7 +47,7 @@ end
 Apply this to the "HTTP Response" Event
 
 ```
-key = 234LJKH43J3H4K6KJH77H234
+key = "234LJKH43J3H4K6KJH77H234"
 cookies, count = avi.http.get_cookie_names()
 
 if count > 0 then

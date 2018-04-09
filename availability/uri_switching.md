@@ -27,12 +27,15 @@ when HTTP_REQUEST {
 
 ## Avi HTTP URI Switching
 
+Pools has to be attached to datascript.
+
 ```
-if avi.http.get_path() = "/development" then
+-- HTTP_REQ
+if avi.http.get_path() == "/development" then
   avi.pool.select("pool_development")
-elseif avi.http.get_path() = "/marketing" then
+elseif avi.http.get_path() == "/marketing" then
   avi.pool.select("pool_marketing")
-elseif avi.http.get_path() = "/support" then
+elseif avi.http.get_path() == "/support" then
   avi.pool.select("pool_support")
 else
   avi.http.close_conn()
