@@ -30,35 +30,5 @@
 [X-Forwarded-For Header Insert](security/x_forwarded_for_header_insert.md)  
 [Pseudo-random hex	character	generator](security/pseudo_random_hex_generator.md)  
 [Random Letter generator](security/random_letter_generator.md)  
-## Misc
 
-### Bot corral
-```
-```
-### Custom html response
-```
-body = "Hostname:" + avi.http.hostname()
-avi.http.response( 200, body )
-```
-### Location Port Rewrite
-```
-```
-### Content Switch - Geolocation
-```
-```
-### Cookie jar
-```
-cookie_table = {jsessionid="123", lang="en"}
-avi.http.add_cookie( cookie_table )
-```
-### Log Custom Data
-```
-my_string = "This is to be inserted into the log"
-avi.vs.log(my_string)
-```
-### Cookie encryption gateway
-```
-```
-### Header sanitization
-```
-```
+## Misc
