@@ -30,6 +30,7 @@
 [X-Forwarded-For Header Insert](security/x_forwarded_for_header_insert.md)  
 [Pseudo-random hex	character	generator](security/pseudo_random_hex_generator.md)  
 [Random Letter generator](security/random_letter_generator.md)  
-[Disable HTTP	Processing	For	Selective HTTP	Methods](disable_http_processing_for_selective_http_methods.md)
+[Disable HTTP	Processing	For	Selective HTTP	Methods](security/disable_http_processing_for_selective_http_methods.md)  
+[Mitigate	Microsoft	vulnerability	MS15-034 and CVE-2015-1635](security/mitigate_microsoft_vulnerability_ms15-034.md)  
 
 ## Misc
