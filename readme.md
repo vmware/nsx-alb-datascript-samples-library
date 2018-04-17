@@ -30,5 +30,6 @@
 [X-Forwarded-For Header Insert](security/x_forwarded_for_header_insert.md)  
 [Pseudo-random hex	character	generator](security/pseudo_random_hex_generator.md)  
 [Random Letter generator](security/random_letter_generator.md)  
+[Disable HTTP	Processing	For	Selective HTTP	Methods](disable_http_processing_for_selective_http_methods.md)
 
 ## Misc
