@@ -1,8 +1,7 @@
 # Ratio	based	Load	Balancing
 Using	pseudo	random	number	generation,	in	run	time	take	decisions	like	sending	part	of	the	traffic	to
 one	pool	versus	another.	Below	example	sends	2%	of	connections	to	a	separate	pool	and	remaining
-98%	of	connections are	sent	to	the	virtual	server's	default	pool.	The	second	example	selects	a	separate
-pool	for	2%	of	requests	to	a	specific	set	of	URIs. This is only datascript example, the functionality below can be done through Pool Groups: https://avinetworks.com/docs/latest/pool-groups/
+98%	of	connections are	sent	to	the	virtual	server's	default	pool.	This is only datascript example, the functionality below can be done through Pool Groups: https://avinetworks.com/docs/latest/pool-groups/
 Pools has to be attached to datascript. Apply this to the "HTTP REQUEST" Event.
 
 ```
