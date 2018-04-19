@@ -15,6 +15,7 @@
 [Header Persistence using Akamai True-Client-IP header](availability/header_persistence_akamai_true_client_ip.md)  
 [HTTP redirect based on Client location taken from source IP address](availability/http_redirect_based_on_client_country.md)  
 [Rewrite	HTTP	redirect	response	from	301	to	302](availability/rewrite_http_redirect_response_from_301_302.md)  
+[Ratio	based	Load	Balancing](availability/ratio_based_load_balancing.md)  
 
 ## Security
 
