@@ -35,5 +35,6 @@
 [Disable HTTP	Processing	For	Selective HTTP	Methods](security/disable_http_processing_for_selective_http_methods.md)  
 [Mitigate	Microsoft	vulnerability	MS15-034 and CVE-2015-1635](security/mitigate_microsoft_vulnerability_ms15-034.md)   
 [Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
+[Computing HMAC](security/computing_hmac.md)  
 
 ## Misc
