@@ -16,6 +16,7 @@
 [HTTP redirect based on Client location taken from source IP address](availability/http_redirect_based_on_client_country.md)  
 [Rewrite	HTTP	redirect	response	from	301	to	302](availability/rewrite_http_redirect_response_from_301_302.md)  
 [Ratio	based	Load	Balancing](availability/ratio_based_load_balancing.md)  
+[Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
 
 ## Security
 
