@@ -16,15 +16,13 @@
 [HTTP redirect based on Client location taken from source IP address](availability/http_redirect_based_on_client_country.md)  
 [Rewrite	HTTP	redirect	response	from	301	to	302](availability/rewrite_http_redirect_response_from_301_302.md)  
 [Ratio	based	Load	Balancing](availability/ratio_based_load_balancing.md)  
-[Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
 [Location header rewrite with non-standard port](availability/location_header_rewrite_with_nonstandard_port.md)  
 
 ## Security
 
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  
 [Client Cert check](security/client_cert_check.md)  
-[Log SSL Version/Cipher and block SSLv3.0, TLSv1.0 or cipher suites that don't provide encryption](security/log_ssl_version.md)  
-[Log HTTP Headers](security/log_http_headers.md)  
+
 [Close Connections without Host](security/close_connection_without_host.md)  
 [Cookie Encryption Gateway](security/cookie_encryption_gateway.md)  
 [Header Insertion for Content Security](security/header_insertion_for_content_security.md)  
@@ -38,5 +36,13 @@
 [Mitigate	Microsoft	vulnerability	MS15-034 and CVE-2015-1635](security/mitigate_microsoft_vulnerability_ms15-034.md)   
 [Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
 [Computing HMAC](security/computing_hmac.md)  
+[Controlling Bots](security/controlling_bots.md)
+
+## Acceleration
+[Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
+
+## Troubleshooting
+[Log SSL Version/Cipher and block SSLv3.0, TLSv1.0 or cipher suites that don't provide encryption](security/log_ssl_version.md)  
+[Log HTTP Headers](security/log_http_headers.md)  
 
 ## Misc
