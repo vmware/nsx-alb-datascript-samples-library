@@ -1,7 +1,6 @@
 # Datascript Examples
 
 ## Availability
-
 [HTTP Host Switching](availability/host_switching.md)  
 [HTTP Host Switching using Host Header](availability/host_switching2.md)  
 [HTTP Host Switching using Host Header and String Groups](availability/host_switching3.md)  
@@ -19,7 +18,6 @@
 [Location header rewrite with non-standard port](availability/location_header_rewrite_with_nonstandard_port.md)  
 
 ## Security
-
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  
 [Client Cert check](security/client_cert_check.md)  
 [Block SSLv3.0, TLSv1.0 or cipher suites that don't provide encryption](security/log_ssl_version.md)  
@@ -30,8 +28,6 @@
 [X-Client-IP allow requests from range of IPs](security/x_client_allow_request_from_range_of_ips.md)  
 [Blacklist Specific URIs using String Group](security/blacklist_specific_uris_using_stringgroup.md)    
 [X-Forwarded-For Header Insert](security/x_forwarded_for_header_insert.md)  
-[Pseudo-random hex	character	generator](security/pseudo_random_hex_generator.md)  
-[Random Letter generator](security/random_letter_generator.md)  
 [Disable HTTP	Processing	For	Selective HTTP	Methods](security/disable_http_processing_for_selective_http_methods.md)  
 [Mitigate	Microsoft	vulnerability	MS15-034 and CVE-2015-1635](security/mitigate_microsoft_vulnerability_ms15-034.md)   
 [Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
@@ -46,3 +42,5 @@
 [Log HTTP Headers](security/log_http_headers.md)  
 
 ## Misc
+[Pseudo-random hex	character	generator](security/pseudo_random_hex_generator.md)  
+[Random Letter generator](security/random_letter_generator.md)  
