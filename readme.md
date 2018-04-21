@@ -22,7 +22,7 @@
 
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  
 [Client Cert check](security/client_cert_check.md)  
-
+[Block SSLv3.0, TLSv1.0 or cipher suites that don't provide encryption](security/log_ssl_version.md)  
 [Close Connections without Host](security/close_connection_without_host.md)  
 [Cookie Encryption Gateway](security/cookie_encryption_gateway.md)  
 [Header Insertion for Content Security](security/header_insertion_for_content_security.md)  
@@ -42,7 +42,7 @@
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
 
 ## Troubleshooting
-[Log SSL Version/Cipher and block SSLv3.0, TLSv1.0 or cipher suites that don't provide encryption](security/log_ssl_version.md)  
+[Log SSL Version](security/log_ssl_version.md)  
 [Log HTTP Headers](security/log_http_headers.md)  
 
 ## Misc
