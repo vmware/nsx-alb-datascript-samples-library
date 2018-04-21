@@ -17,7 +17,7 @@
 [Rewrite	HTTP	redirect	response	from	301	to	302](availability/rewrite_http_redirect_response_from_301_302.md)  
 [Ratio	based	Load	Balancing](availability/ratio_based_load_balancing.md)  
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
-[Location header rewrite with non-standard port] (availability/location_header_rewrite_with_nonstandard_port.md)  
+[Location header rewrite with non-standard port](availability/location_header_rewrite_with_nonstandard_port.md)  
 
 ## Security
 
