@@ -32,7 +32,8 @@
 [Mitigate	Microsoft	vulnerability	MS15-034 and CVE-2015-1635](security/mitigate_microsoft_vulnerability_ms15-034.md)   
 [Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
 [Computing HMAC](security/computing_hmac.md)  
-[Controlling Bots](security/controlling_bots.md)
+[Controlling Bots](security/controlling_bots.md)  
+[Cross	Origin	Resource	Sharing	Implementation](security/cors.md)
 
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
