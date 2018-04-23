@@ -4,7 +4,7 @@ Logging of SSL/TLS version for enhanced log collection and troubleshooting use c
 OpenSSL cipher suites: https://www.openssl.org/docs/manmaster/man1/ciphers.html
 
 
-```
+```lua
 -- HTTP_REQUEST
 -- logging version
 avi.vs.log(avi.ssl.protocol() .. ":" .. avi.ssl.cipher())

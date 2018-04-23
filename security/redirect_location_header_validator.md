@@ -10,7 +10,7 @@ for any	redirects	which	are	to	a	domain	that	is	not	in	a	whitelist	string	data	g
   - example.org
 3. Attach Stringroup to datascript below. Apply this to the "HTTP RESPONSE" Event.
 
-```
+```lua
 -- HTTP_RESPONSE
 location = avi.http.get_header("Location")
 -- if redirect and location header set

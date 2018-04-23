@@ -4,7 +4,7 @@ HMAC	is	a	keyed-hash	message	authentication	code	computed involving	a	cryptograp
 function	in	combination	with	a	 secret	cryptographic	key.	It	can be	used	 to	 simultaneously
 verify	both	the	data	integrity	and	the	authentication	of	a	message.
 
-```
+```lua
 ---HTTP_REQ or HTTP_RESP
 host = avi.http.get_header("Host")
 -- if host header exists

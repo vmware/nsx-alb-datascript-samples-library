@@ -30,7 +30,7 @@ when HTTP_RESPONSE {
 
 Apply this to the "HTTP Request" Event
 
-```
+```lua
 key = "234LJKH43J3H4K6KJH77H234"
 cookies, count = avi.http.get_cookie_names()
 
@@ -46,7 +46,7 @@ end
 
 Apply this to the "HTTP Response" Event
 
-```
+```lua
 key = "234LJKH43J3H4K6KJH77H234"
 cookies, count = avi.http.get_cookie_names()
 

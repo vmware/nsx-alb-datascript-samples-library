@@ -7,7 +7,7 @@ Persistence can be easily done through REST/UI/CLI: https://avinetworks.com/docs
 
 Apply these scripts to the "HTTP REQUEST" & "HTTP RESPONSE" events appropriately ,pool has to be selected for datascript.
 
-```
+```lua
 -- HTTP_REQUEST
 default_pool = "primary_pool"
 avi.vs.reqvar.true_client_ip =  avi.http.get_header("True-Client-IP")
@@ -27,7 +27,7 @@ if avi.vs.reqvar.true_client_ip then
 end
 ```
 
-```
+```lua
 -- HTTP_RESPONSE
 if avi.vs.reqvar.true_client_ip then
   selected_server_ip = avi.pool.server_ip()

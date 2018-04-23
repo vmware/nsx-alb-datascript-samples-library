@@ -15,7 +15,7 @@ there.
   - http://example.org
 3. Use the following Datascript in your HTTP REQUEST and RESPONSE events, StringGroup  "allowed_origins" has to be associated with datascript.
 
-```
+```lua
 -- HTTP_REQUEST
 origin_header= avi.http.get_header("Origin")
 -- if Origin header exists and part of allowed_origins stringroup
@@ -35,7 +35,7 @@ if origin_header then
 end
 ```
 
-```
+```lua
 -- HTTP_RESPONSE
 -- if Origin Header was provided by client in HTTP REQUEST
 if avi.vs.reqvar.origin_header then

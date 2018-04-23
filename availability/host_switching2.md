@@ -2,7 +2,7 @@
 
 Load balance requests across different pools based on Host header. Assuming host header value/name is used to generate pool name. Example, if host header equals to 'www.example.com',' pool 'www.example.com_pool' will be selected. If 'www.example.com_pool' has servers up in the pool, pool will be selected. Pools has to be attached to datascript. Apply this to the "HTTP REQUEST" Event.
 
-```
+```lua
 -- HTTP_REQUEST
 default_pool = "default_pool"
 host = avi.http.get_header("Host")

@@ -29,7 +29,7 @@ when HTTP_REQUEST {
 
 Pools has to be attached to datascript.
 
-```
+```lua
 -- HTTP_REQ
 if avi.http.get_path() == "/development" then
   avi.pool.select("pool_development")

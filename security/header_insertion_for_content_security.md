@@ -1,7 +1,7 @@
 # Header Insertion for Content Security
   Defining and inserting required headers in response for content security. Apply this to the "HTTP RESPONSE" Event.
 
-```
+```lua
 -- HTTP_RESP
 -- https://securityheaders.io/
 -- Templates > Profiles > HTTP application profile’s security settings page affects how a virtual service should handle HTTPS

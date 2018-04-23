@@ -22,7 +22,7 @@ when HTTP_REQUEST {
 
 ## Avi HTTP URI Switching
 
-```
+```lua
 content = avi.http.get_path()
 file_types = {".gif", ".jpg", ".png", ".ico", ".css"}
 

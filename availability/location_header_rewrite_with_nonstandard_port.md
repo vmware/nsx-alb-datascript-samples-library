@@ -1,4 +1,4 @@
-# Location header rewrite with non-standard port 
+# Location header rewrite with non-standard port
 
 Location	header	provides	 the	information	 to	client	as	where	 to	go	next.	While	 the	location	header
 mostly	gets	generated	by	backend	Apps,	there	is	a	need	to	change	them	on	load	balancing	device.
@@ -8,7 +8,7 @@ changes	as	well	as	at	times	you	are	required	to	change	to	a	non-standard	port	ba
 service	is	running.
 
 
-```
+```lua
 -- HTTP_RESPONSE
 --
 -- Rewrites the HTTP Location header in a HTTP Reponse from HTTP to HTTPS and a none standard port to the end of the hostname

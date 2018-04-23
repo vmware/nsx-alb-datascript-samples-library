@@ -29,7 +29,7 @@ Because Avi doesn't have a class matching function, we can instead make use of t
   - 172.16.0.0/12
   - 192.168.0.0/16
 3. Use the following Datascript in your request event.
-```
+```lua
 clientIP = avi.vs.client()
 if avi.ipgroup.contains("Internal", clientIP) then
   avi.pool.select("internal_pool")

@@ -18,7 +18,7 @@ when HTTP_REQUEST {
 
 ## Avi HTTP Host Switching
 
-```
+```lua
 host = avi.http.hostname()
 
 if host == "site1.company.com" then avi.pool.select("Site1_Pool")

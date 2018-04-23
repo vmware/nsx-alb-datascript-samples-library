@@ -4,10 +4,10 @@ us	use	it	for	our	everyday	jobs	to	get	done. HTTP	RFC	has	defined	common	set	of	
 and	operations	to	be	used.	While	there	are	some	special	methods	and	operations	which	are
 not	expected	to	be	used	in	normal	use	cases.	This	example	shows	how	you	can	disable	HTTP
 processing	and	specific	functions	for	these	methods. Apply this to the "HTTP REQUEST" Event.
-This is only datascript example, the functionality below can be done through HTTP Policies framework or WAF as well. 
+This is only datascript example, the functionality below can be done through HTTP Policies framework or WAF as well.
 
 
-```
+```lua
 --HTTP_REQUEST
 restricted_methods = "MOVE,COPY,LOCK,UNLOCK,PROPFIND,PROPPATCH,MKCOL"
 event_method = avi.http.method()

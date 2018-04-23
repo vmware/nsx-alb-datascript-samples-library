@@ -4,7 +4,7 @@ HTTP	 Cookie	 are	 key	 to	 Application	 access	 and	 persistence	 and	 post	 au
 value	of	the	cookie	contains	any	characters	not	defined	in	the	configured	legal	list	of	characters	and	log	that	entry.
 
 
-```
+```lua
 -- HTTP_REQUEST
 -- get cookies
 cookies, count = avi.http.get_cookie_names()

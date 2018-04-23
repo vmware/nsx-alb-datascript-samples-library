@@ -1,7 +1,7 @@
 # Remove X-* and Server Headers from Response
   Remove multiple X-* headers inserted by proxies on request path, as well as hide Server header. Apply this to the "HTTP RESPONSE" Event.
 
-```
+```lua
 -- HTTP_RESP
 -- get http headers
 headers = avi.http.get_header()

@@ -1,7 +1,7 @@
 # Load Balancing during Maintenance Window
 How to perform efficient load balancing during maintenance window. Apply this to the "HTTP REQUEST" Event, pool "maintenance_pool" has to be selected for datascript.
 
-```
+```lua
 maintenance_pool = "maintenance_pool"
 
 start_date = os.date("03/22/2018 07:20 PM")

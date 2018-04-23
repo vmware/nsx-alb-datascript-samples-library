@@ -2,7 +2,7 @@
 
 Rewrite	HTTP	responses	with	HTTP	status	code	301	which	is	for	Permanent	Redirect	to	302	which	is used	for	Temporary	Redirect. Apply this to the "HTTP RESPONSE" Event.
 
-```
+```lua
 -- HTTP_RESPONSE
 -- if server response is a redirect 301, rewrite to 302, same location
 

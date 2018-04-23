@@ -6,7 +6,7 @@ and ensures that Issuer for this certificate is known. More details: https://avi
 
 Apply this datascript to the "HTTP Request" Event.
 
-```
+```lua
 -- HTTP_REQUEST
 if avi.http.secure() then
   if avi.ssl.client_cert("avi.CLIENT_CERT_ISSUER") ~=

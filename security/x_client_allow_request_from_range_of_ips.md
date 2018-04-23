@@ -5,7 +5,7 @@
 2. Create a new IP Group, named "allowed_clients_list" with networks/ips to whitelist.
 3. Use the following Datascript in your HTTP REQUEST event, IP Group  "allowed_clients_list" has to be selected for datascript.
 
-```
+```lua
 -- get http headers
 headers = avi.http.get_header()
 -- iterate across set of headers

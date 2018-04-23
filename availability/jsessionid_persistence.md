@@ -27,7 +27,7 @@ when HTTP_RESPONSE {
 
 In the following example we will add a persist for 20 minutes, or update the timer if the entry pre-exists.
 
-```
+```lua
 if avi.http.get_cookie("JSESSIONID") then
   avi.vs.table_insert(avi.http.get_cookie("JSESSIONID"), avi.pool.server_ip(), 1200)
 end
@@ -35,7 +35,7 @@ end
 
 In the following we will rename the pool before applying it to a virtual service.
 
-```
+```lua
 default_pool = "pool1"
 if avi.http.get_cookie("JSESSIONID") then
   avi.pool.select(default_pool, avi.vs.table_lookup(avi.http.get_cookie("JSESSIONID")))

@@ -2,7 +2,7 @@
 
 Load balance requests across different pools based on Host header. Assuming host header value is key and pool name is value in String Group. Example, pools_stringgroup entries will look like www.example.com:www.example.com_pool, where host header value is key (www.example.com) and pool name (www.example.com_pool) is value. If 'www.example.com_pool' has servers up in the pool, pool will be selected. Pools and stringroup has to be attached to datascript. Create String Group using Template > Groups > String Groups. Key Value Pair option must be selected.  Apply this to the "HTTP REQUEST" Event.
 
-```
+```lua
 -- HTTP_REQUEST
 default_pool = "default_pool"
 host = avi.http.get_header("Host")

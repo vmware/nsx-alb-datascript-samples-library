@@ -2,7 +2,7 @@
 Pseudo-random	hex	characters can	be	used	in	the	authentication	and	validation	flow	across
 the	ADC	and	Client/Server.	The	hex	characters	can	be	used	for	different	purposes	as	well
 
-```
+```lua
 local charset = {}  do
     --[0-9]
     for c = 48, 57  do table.insert(charset, string.char(c)) end

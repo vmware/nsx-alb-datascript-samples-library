@@ -4,7 +4,7 @@ with	different	kind	of	content	changes	we	do	while	parsing.	This	example	will	de
 how	to	generate	a	string	of	pseudo-random	letters.
 
 
-```
+```lua
 local charset = {}  do
   -- [a-zA-Z]
   for i = 65,  90 do table.insert(charset, string.char(i)) end

@@ -4,7 +4,7 @@ one	pool	versus	another.	Below	example	sends	2%	of	connections	to	a	separate	poo
 98%	of	connections are	sent	to	the	virtual	server's	default	pool.	This is only datascript example, the functionality below can be done through Pool Groups: https://avinetworks.com/docs/latest/pool-groups/
 Pools has to be attached to datascript. Apply this to the "HTTP REQUEST" Event.
 
-```
+```lua
 math.randomseed(os.clock()^5)
 -- Send 2% of connections to secondary_pool, the rest to default_pool
 if math.random() < 0.02 then avi.pool.select("secondary_pool")

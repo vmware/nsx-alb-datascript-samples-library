@@ -2,7 +2,7 @@
 
  While its important for web crawlers to index your site, they have the ability to devour more than their share of your bandwidth.  Use this Datascript to send them to a quarantined server pool on your site. This is only datascript example, HTTP policy framework also can be used to achieve the same functionality, as option rate limiters and throttling can be applied: https://avinetworks.com/docs/latest/rate-shaping-and-throttling-options/
 
-```
+```lua
 -- HTTP_REQUEST
 bot_user_agent_mask = {"bot", "fast-", "crawler"}
 

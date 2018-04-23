@@ -9,7 +9,7 @@ More details on controlling cache on Avi Vantage: https://avinetworks.com/docs/l
 
 Apply this to the "HTTP RESPONSE" Event.
 
-```
+```lua
 -- HTTP_RESPONSE
 content_path = avi.http.get_path()
 content_header = avi.http.get_header("content-type")
