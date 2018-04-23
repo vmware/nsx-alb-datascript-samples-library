@@ -17,17 +17,19 @@ there.
 
 ```
 -- HTTP_REQUEST
-origin_header = avi.http.get_header("Origin")
--- if Origin header exists and part of allowed origins stringroup
+origin_header= avi.http.get_header("Origin")
+-- if Origin header exists and part of allowed_origins stringroup
 if origin_header then
-  allowed_origin, allowed_origin_match = avi.stringgroup.beginswith("allowed_origins", origin_header)
+  allowed_origin, allowed_origin_match= avi.stringgroup.beginswith("allowed_origins", origin_header)
   if allowed_origin_match then
     allowed_methods= "POST,GET,OPTIONS"
-    access_control_request_method_header = avi.http.get_header("Access-Control-Request-Method")
+    access_control_request_method_header= avi.http.get_header("Access-Control-Request-Method")
+    -- present OPTIONS to the client
     if avi.http.method() == "OPTIONS" and access_control_request_method_header then
-      avi.http.response(200, { Access_Control_Allow_Origin=origin_header,Access_Control_Allow_Methods=allowed_methods,Access_Control_Allow_Headers=access_control_request_method_header,Access_Control_Max_Age="86400",Vary="Origin"})
+      avi.http.response(200, { Access_Control_Allow_Origin= origin_header,Access_Control_Allow_Methods= allowed_methods,Access_Control_Allow_Headers= access_control_request_method_header,Access_Control_Max_Age= "86400",Vary= "Origin"})
     else
-      avi.vs.reqvar.origin_header = origin_header
+    -- save origin header value to use in HTTP_RESPONSE event
+      avi.vs.reqvar.origin_header= origin_header
     end
   end
 end
@@ -35,6 +37,7 @@ end
 
 ```
 -- HTTP_RESPONSE
+-- if Origin Header was provided by client in HTTP REQUEST
 if avi.vs.reqvar.origin_header then
   avi.http.replace_header("Access-Control-Allow-Origin",avi.vs.reqvar.origin_header)
   avi.http.replace_header("Access-Control-Allow-Credentials","true")
