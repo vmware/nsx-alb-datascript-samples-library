@@ -33,7 +33,8 @@
 [Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
 [Computing HMAC](security/computing_hmac.md)  
 [Controlling Bots](security/controlling_bots.md)  
-[Cross	Origin	Resource	Sharing	Implementation](security/cors.md)
+[Cross	Origin	Resource	Sharing	Implementation](security/cors.md)  
+[Validate String Characters in Cookie](security/validate_string_characters_in_cookie.md)
 
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
