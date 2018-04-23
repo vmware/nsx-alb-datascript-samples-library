@@ -1,6 +1,6 @@
 # X-Forwarded-For Header Insert
   Checking for the header and inserting one if not found with respective value.
-```
+```lua
 -- HTTP_REQUEST
 -- get http headers
 headers = avi.http.get_header()
