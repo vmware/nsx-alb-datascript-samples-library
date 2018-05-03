@@ -3,12 +3,17 @@
 avi.vs.reqvar.cookie_private_key= "7762135A21351139927D442559CE06CC"
 proxy_pool = "proxy_pool"
 local_pool = "local_pool"
+
+-- Globals
 local_pool_servers_up_count, local_pool_servers_total_count = avi.pool.get_servers(local_pool)
 proxy_pool_servers_up_count, proxy_pool_servers_total_count = avi.pool.get_servers(proxy_pool)
-avi.vs.reqvar.maintenance_mode = 0
-avi.vs.reqvar.set_cookie = 0
+cookie_exists = nil
+decrypted_site_cookie = nil
+avi.vs.reqvar.maintenance_mode = nil
+avi.vs.reqvar.set_cookie = nil
 
 if avi.http.cookie_exists("site-cookie") then
+  cookie_exists = 1
   site_cookie = avi.http.get_cookie("site-cookie")
   decoded_site_cookie = avi.utils.base64_decode(site_cookie)
   valid_block_length = pcall(avi.crypto.decrypt,decoded_site_cookie,avi.vs.reqvar.cookie_private_key)
@@ -20,7 +25,7 @@ if avi.http.cookie_exists("site-cookie") then
   end
 end
 
-if decrypted_site_cookie then
+if cookie_exists and decrypted_site_cookie then
   site_cookie = {}
   for match in string.gmatch(decrypted_site_cookie,"%w+") do
           table.insert(site_cookie,match)
