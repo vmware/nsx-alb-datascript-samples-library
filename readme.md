@@ -34,7 +34,8 @@
 [Computing HMAC](security/computing_hmac.md)  
 [Controlling Bots](security/controlling_bots.md)  
 [Cross	Origin	Resource	Sharing	Implementation](security/cors.md)  
-[Validate String Characters in Cookie](security/validate_string_characters_in_cookie.md)
+[Validate String Characters in Cookie](security/validate_string_characters_in_cookie.md)  
+[Parse and Log Username from HTTP requests](security/parse_and_log_username_from_http_req.md)
 
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
