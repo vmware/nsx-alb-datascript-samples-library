@@ -27,17 +27,17 @@ end
 
 if cookie_exists and decrypted_site_cookie then
   site_cookie = {}
-  for match in string.gmatch(decrypted_site_cookie,"%w+") do
+  for match in decrypted_site_cookie:gmatch("([^:]+),?") do
           table.insert(site_cookie,match)
   end
   -- decrypted_site_cookie = "VS1:192.168.0.246:80"
   -- site_cookie[1] = VS1
-  -- site_cookie[2] ..".".. site_cookie[3] ..".".. site_cookie[4] ..".".. site_cookie[5]  = 192.168.0.246
-  -- site_cookie[6] = 80
+  -- site_cookie[2] = 192.168.0.246
+  -- site_cookie[3] = 80
 
   cookie_site_id = site_cookie[1]
-  cookie_proxy_pool_server_address = site_cookie[2] ..".".. site_cookie[3] ..".".. site_cookie[4] ..".".. site_cookie[5]
-  cookie_proxy_pool_server_port = site_cookie[6]
+  cookie_proxy_pool_server_address = site_cookie[2]
+  cookie_proxy_pool_server_port = site_cookie[3]
 
 
   if cookie_site_id == avi.vs.name() then
