@@ -41,3 +41,6 @@ if avi.http.get_cookie("JSESSIONID") then
   avi.pool.select(default_pool, avi.vs.table_lookup(avi.http.get_cookie("JSESSIONID")))
 end
 ```
+
+## Similar pages
+[Header Persistence using True-Client-IP header](availability/header_persistence_akamai_true_client_ip.md)  
