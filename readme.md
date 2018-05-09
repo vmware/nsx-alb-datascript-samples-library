@@ -1,21 +1,28 @@
-# Datascript Examples
+# DataScript Examples
 
-## Availability
+## Content Switching
 [HTTP Host Switching](availability/host_switching.md)  
 [HTTP Host Switching using Host Header](availability/host_switching2.md)  
 [HTTP Host Switching using Host Header and String Groups](availability/host_switching3.md)  
 [HTTP URI Switching - Simple](availability/uri_switching.md)  
 [HTTP URI Switching - Advanced](availability/uri_switching2.md)  
 [HTTP IP Switching](availability/ip_switching.md)  
-[JSessionID Persistence](availability/jsessionid_persistence.md)  
+
+## Availability
+
 [HTTP Retry 500 Errors](availability/http_retry_500_error.md)  
 [Fall back to secondary pool or custom maintenance page](availability/fall_back_to_secondary_pool_if_primary_pool_is_down_display_maint_page.md)  
 [Load Balancing during Maintenance Window](availability/load_balancing_during_maintenance.md)  
-[Header Persistence using Akamai True-Client-IP header](availability/header_persistence_akamai_true_client_ip.md)  
 [HTTP redirect based on Client location taken from source IP address](availability/http_redirect_based_on_client_country.md)  
 [Rewrite	HTTP	redirect	response	from	301	to	302](availability/rewrite_http_redirect_response_from_301_302.md)  
 [Ratio	based	Load	Balancing](availability/ratio_based_load_balancing.md)  
 [Location header rewrite with non-standard port](availability/location_header_rewrite_with_nonstandard_port.md)  
+
+## Persistence
+
+[Header Persistence](availability/custom_header_persistence.md)  
+[JSessionID Persistence](availability/jsessionid_persistence.md)  
+[Site Persistence using Cookie - Solution A](availability/site_persistence.md)  
 
 ## Security
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  

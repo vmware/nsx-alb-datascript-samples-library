@@ -43,4 +43,4 @@ end
 ```
 
 ## Similar pages
-[Header Persistence using True-Client-IP header](header_persistence_akamai_true_client_ip.md)  
+[Header Persistence using True-Client-IP header](custom_header_persistence.md)  
