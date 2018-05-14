@@ -24,6 +24,7 @@
 [JSessionID Persistence](availability/jsessionid_persistence.md)  
 [Site Persistence using Cookie - Solution A](availability/site_persistence.md)  
 [Site Persistence using Cookie - Solution B](availability/site_persistence2.md)  
+[Persistence using URI with options for timeout](availability/uri_persistence.md)  
 
 ## Security
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  
