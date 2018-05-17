@@ -6,7 +6,7 @@ Solution A:
 1. Cookie "site-cookie" is leveraged to define site persistence by allocating the cookie on new request that identify site specific information, site_cookie is defined as site_cookie = avi.vs.name() .. ":" .. avi.vs.ip() .. ":" .. avi.vs.port()
 2. There are two pools has to be defined per site local_pool and proxy_pool:
    a. local_pool will be used to serve new requests locally or redirected requests from other sites based on decisions made at remote sites. local_pool includes actual servers.
-   b. proxy_pool will be used to redirect requests to site defined in cookie or will be pool to handle request if there are no local pool members considered up. proxy_pool includes other sites Virtual Services IP.
+   b. proxy_pool will be used to redirect requests to site defined in cookie or will be pool to handle request if there are no local pool members considered up. proxy_pool includes other sites Virtual Services IPs.
 3. There are list of health checks built-in:
    a. to avoid redirecting request to site with no active servers in local_pool
    b. to avoid attaching cookie for local processing if there are no local_pool members up
