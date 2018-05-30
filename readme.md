@@ -27,26 +27,29 @@
 [Site Persistence using Cookie - Solution C](availability/site_persistence3.md)  
 [Persistence using URI with options for timeout](availability/uri_persistence.md)  
 
+
 ## Security
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  
 [Client Cert check](security/client_cert_check.md)  
 [Block SSLv3.0, TLSv1.0 or cipher suites that don't provide encryption](security/log_ssl_version.md)  
-[Close Connections without Host](security/close_connection_without_host.md)  
-[Cookie Encryption Gateway](security/cookie_encryption_gateway.md)  
-[Header Insertion for Content Security](security/header_insertion_for_content_security.md)  
-[Remove X-* and Server Headers from Response](security/remove_x_headers_from_http_resp.md)  
-[X-Client-IP allow requests from range of IPs](security/x_client_allow_request_from_range_of_ips.md)  
 [Blacklist Specific URIs using String Group](security/blacklist_specific_uris_using_stringgroup.md)    
-[X-Forwarded-For Header Insert](security/x_forwarded_for_header_insert.md)  
 [Disable HTTP	Processing	For	Selective HTTP	Methods](security/disable_http_processing_for_selective_http_methods.md)  
 [Mitigate	Microsoft	vulnerability	MS15-034 and CVE-2015-1635](security/mitigate_microsoft_vulnerability_ms15-034.md)   
-[Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
 [Computing HMAC](security/computing_hmac.md)  
 [Controlling Bots](security/controlling_bots.md)  
 [Cross	Origin	Resource	Sharing	Implementation](security/cors.md)  
-[Validate String Characters in Cookie](security/validate_string_characters_in_cookie.md)  
 [Parse and Log Username from HTTP requests](security/parse_and_log_username_from_http_req.md)
-
+### Security - Cookie
+[Validate String Characters in Cookie / Cookie Sanitizer](security/validate_string_characters_in_cookie.md)  
+[Cookie Encryption Gateway](security/cookie_encryption_gateway.md)  
+[Cookie Rewrite / Cookie Sanitizer](security/cookie_rewrite.md)  
+### Security - Header
+[X-Forwarded-For Header Insert](security/x_forwarded_for_header_insert.md)  
+[X-Client-IP allow requests from range of IPs](security/x_client_allow_request_from_range_of_ips.md)  
+[Header Insertion for Content Security](security/header_insertion_for_content_security.md)  
+[Remove X-* and Server Headers from Response](security/remove_x_headers_from_http_resp.md)  
+[Close Connections without Host header](security/close_connection_without_host.md)
+[Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
 
