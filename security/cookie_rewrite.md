@@ -2,6 +2,7 @@
 
 Modify cookie value of cookie "domain" from example.com to example.int on HTTP_REQUEST and overwrite it back to original on HTTP_RESPONSE. This example can be used to sanitize cookie payload for server processing.
 
+```lua
 -- HTTP_REQUEST
 if avi.http.cookie_exists("domain") then
   cookie_value = avi.http.get_cookie("domain")
@@ -21,3 +22,4 @@ if avi.http.cookie_exists("domain") then
     avi.http.replace_cookie(cookie_table)
   end
 end
+```
