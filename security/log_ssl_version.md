@@ -9,7 +9,7 @@ OpenSSL cipher suites: https://www.openssl.org/docs/manmaster/man1/ciphers.html
 -- logging version
 avi.vs.log(avi.ssl.protocol() .. ":" .. avi.ssl.cipher())
 -- closing connection for SSLv3.0 or TLSv1.0
-if avi.ssl.protocol() == "TLSv1" or avi.ssl.protocol() == "SSLv3.0" then
+if avi.ssl.protocol() == "TLSv1" or avi.ssl.protocol() == "SSLv3" then
   avi.http.close_conn()
 -- blocking cipher suites that don't provide encryption or DES/3DES cipher suites
 -- Overlaps with https://avinetworks.com/docs/latest/ssl-tls-profile/
