@@ -7,7 +7,7 @@ Site Persistence can be achieved leveraging built-in Avi GSLB functionality, how
 3. There are two pools has to be defined per site local_pool and remote_pool:
    a. local_pool will be used to serve new requests/sessions or existing. Existing sessions will be identified by server persistence cookie. Local_pool consists of actual application servers.  local_pool will have persistence profile assigned - based on cookie.
    b. remote_pool will be used to redirect sessions/requests to remote site based on server persistence cookie. Remote_pool will include only ip of remote site virtual service.  remote_pool will not have persistence profile enabled.
-
+4. local_pool_status_uri defines uri to query virtual service status based on local_pool state by external GSLB system
 
 ```lua
 -- HTTP_REQ
