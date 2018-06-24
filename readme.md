@@ -24,7 +24,7 @@
 [JSessionID Persistence](availability/jsessionid_persistence.md)  
 [Site Persistence using Cookie - Solution A](availability/site_persistence.md)  
 [Site Persistence using Cookie - Solution B](availability/site_persistence2.md)  
-[Site Persistence using Cookie - Solution C](availability/site_persistence3.md)  
+[Site Persistence Leveraging Server Persistence Cookie for Two Sites Scenario](availability/site_persistence3.md)  
 [Persistence using URI with options for timeout](availability/uri_persistence.md)  
 
 

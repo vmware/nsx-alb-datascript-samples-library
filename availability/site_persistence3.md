@@ -1,111 +1,45 @@
-# Custom Site Persistence using Cookie - Solution C
+# Custom Site Persistence Leveraging Server Persistence Cookie for Two Sites Scenario
 
 Site Persistence can be achieved leveraging built-in Avi GSLB functionality, however there are use cases when external GSLB is used and site persistence required with Avi solution.
 
-Solution C (Solution B with removed maintenance mode):
-1. Cookie "site-cookie" is leveraged to define site persistence by allocating the cookie on new request that identify site specific information, site_cookie is defined as site_cookie = avi.vs.name() .. ":" .. avi.vs.ip() .. ":" .. avi.vs.port()
-2. There are two pools has to be defined per site local_pool and proxy_pool:
-   a. local_pool will be used to serve new requests locally or redirected requests from other sites based on decisions made at remote sites. local_pool includes actual servers.
-   b. proxy_pool will be used to redirect requests to site defined in cookie or will be pool to handle request if there are no local pool members considered up. proxy_pool includes other sites Virtual Services IPs.
-3. There are list of health checks built-in:
-   a. to avoid redirecting request to site with no active servers in local_pool
-   b. to avoid attaching cookie for local processing if there are no local_pool members up
-4. Solution B is optimized based on server_persistence_cookie processing first, meaning if the local site receives request with already local server_persistence_cookie traffic will be processed locally or as site-cookie is not set. This done to minimize request processing time, where in Solution A site_cookie logic is always required to be executed.
-5. Solution B is drafted for two sites scenario, where server persistence cookie is configured on local_pool using Avi API. The code can be minimized even more, considering two sites scenario, however in order to scale it later for 3-4 sites scenario - the site_cookie section kept the same as in Scenario A.
+1. Solution is designated to achieve site persistence across two sites scenario.
+2. Sites are identified by server persistence cookie name assigned using persistence profile.
+3. There are two pools has to be defined per site local_pool and remote_pool:
+   a. local_pool will be used to serve new requests/sessions or existing. Existing sessions will be identified by server persistence cookie. Local_pool consists of actual application servers.  local_pool will have persistence profile assigned - based on cookie.
+   b. remote_pool will be used to redirect sessions/requests to remote site based on server persistence cookie. Remote_pool will include only ip of remote site virtual service.  remote_pool will not have persistence profile enabled.
+
 
 ```lua
 -- HTTP_REQ
--- Setup
-avi.vs.reqvar.cookie_private_key= "7762135A21351139927D442559CE06CC"
-local_site_server_persistence_cookie_name = "PQZMEVKT"
-remote_site_server_persistence_cookie_name = "WOLVEXEI"
-avi.vs.reqvar.site_persistence_cookie_name = "site-cookie"
+-- local_pool will have persistence set using persistence profile under pool configuration
+local_site_server_persistence_cookie_name = "KVAAVROI"
+-- remote_pool will not have persistence profile, remote_pool is to represent remote virtualservice, remote_pool will be used to proxy requests back to originally pinned servers based on local_pool persistence
+-- cookie specified below is to identify remote site, the actual remote_site_server_persistence_cookie_name represents a cookie name that set by persistence profile under local_pool configuration at remote site
+remote_site_server_persistence_cookie_name = "DDVHSLLQ"
+-- local_pool will be default pool for virtualservice and will be set under virtualservice configuration
 local_pool = "local_pool"
-proxy_pool = "proxy_pool"
+-- remote_pool to include ip address of virtualservice of remotesite
+remote_pool = "remote_pool"
+-- specify uri which will be used to access local pool health status
+local_pool_status_uri = "/local_pool_status"
 
--- Globals
 local_pool_servers_up_count, local_pool_servers_total_count = avi.pool.get_servers(local_pool)
-proxy_pool_servers_up_count, proxy_pool_servers_total_count = avi.pool.get_servers(proxy_pool)
-cookie_exists = nil
-decrypted_site_cookie = nil
-avi.vs.reqvar.set_cookie = nil
+remote_pool_servers_up_count, remote_pool_servers_total_count = avi.pool.get_servers(remote_pool)
 
-if avi.http.cookie_exists(avi.vs.reqvar.site_persistence_cookie_name) and ( avi.http.cookie_exists(local_site_server_persistence_cookie_name) == false or avi.http.cookie_exists(remote_site_server_persistence_cookie_name)) then
-  cookie_exists = 1
-  site_cookie = avi.http.get_cookie(avi.vs.reqvar.site_persistence_cookie_name)
-  decoded_site_cookie = avi.utils.base64_decode(site_cookie)
-  valid_block_length = pcall(avi.crypto.decrypt,decoded_site_cookie,avi.vs.reqvar.cookie_private_key)
-  if valid_block_length then
-    decrypted_site_cookie = avi.crypto.decrypt(decoded_site_cookie,avi.vs.reqvar.cookie_private_key)
-  else
-    avi.http.remove_cookie(avi.vs.reqvar.site_persistence_cookie_name)
-    decrypted_site_cookie = nil
-  end
-end
-
-if cookie_exists and decrypted_site_cookie then
-  site_cookie = {}
-  for match in decrypted_site_cookie:gmatch("([^:]+),?") do
-          table.insert(site_cookie,match)
-  end
-  -- decrypted_site_cookie = "VS1:192.168.0.246:80"
-  -- site_cookie[1] = VS1
-  -- site_cookie[2] = 192.168.0.246
-  -- site_cookie[3] = 80
-
-  cookie_site_id = site_cookie[1]
-  cookie_proxy_pool_server_address = site_cookie[2]
-  cookie_proxy_pool_server_port = site_cookie[3]
-
-  if cookie_site_id == avi.vs.name() then
-    -- if local request and local pool has operational members, serve the request
-    if local_pool_servers_up_count >= 1 then
-      avi.vs.reqvar.set_cookie = 1
-      avi.pool.select(local_pool)
-    -- if local request, the request has to be served by local pool, however if local pool does not have any active members, request has to be send to proxy pool
-    elseif proxy_pool_servers_up_count >= 1 and local_pool_servers_up_count < 1 then
-      avi.http.remove_cookie(avi.vs.reqvar.site_persistence_cookie_name)
-      avi.pool.select(proxy_pool)
-    end
-  else
-    -- if request is not designed for local site, the request has to be served by proxy pool, however if proxy pool does not have any active members, request has to be send to local pool
-    -- if request is not designed for local site and proxy pool has operational members, redirect the request to original server
-    if proxy_pool_servers_up_count >= 1 then
-      -- validate if provided proxy pool server is part of proxy pool
-      cookie_proxy_pool_server_exists = pcall(avi.pool.select,proxy_pool,cookie_proxy_pool_server_address)
-      if cookie_proxy_pool_server_exists then
-        avi.pool.select(proxy_pool, cookie_proxy_pool_server_address)
-      else
-        avi.vs.reqvar.set_cookie = 1
-        avi.http.remove_cookie(avi.vs.reqvar.site_persistence_cookie_name)
-        avi.pool.select(local_pool)
-      end
-    elseif local_pool_servers_up_count >= 1 and proxy_pool_servers_up_count < 1 then
-      -- set a new persistence cookie on HTTP_RESP
-      avi.vs.reqvar.set_cookie = 1
-      avi.http.remove_cookie(avi.vs.reqvar.site_persistence_cookie_name)
-      avi.pool.select(local_pool)
-    end
-  end
-else
+-- Providing local pool state to allow external gslb service properly perform health monitor of virtualservice based on local pool state
+if avi.http.get_uri() == local_pool_status_uri then
   if local_pool_servers_up_count >= 1 then
-  -- if no cookie, serve request locally
-  -- set a new persistence cookie on HTTP_RESP
-    avi.vs.reqvar.set_cookie = 1
-    avi.pool.select(local_pool)
-  -- if no cookie, and local pool does not have active members, redirect request to proxy pool
-  elseif proxy_pool_servers_up_count >= 1 and local_pool_servers_up_count < 1 then
-    avi.pool.select(proxy_pool)
+    avi.http.response(200, {content_type="text/html"},
+      "LOCAL POOL STATE: UP")
+  else
+    avi.http.response(503, {content_type="text/html"},
+      "LOCAL POOL STATE: DOWN")
   end
 end
-```
 
-```lua
--- HTTP_RESP
-if avi.vs.reqvar.set_cookie == 1 then
-    site_cookie = avi.vs.name() .. ":" .. avi.vs.ip() .. ":" .. avi.vs.port()
-    encrypted_site_cookie = avi.crypto.encrypt(site_cookie, avi.vs.reqvar.cookie_private_key)
-    encoded_site_cookie = avi.utils.base64_encode(encrypted_site_cookie)
-    avi.http.add_cookie (avi.vs.reqvar.site_persistence_cookie_name, encoded_site_cookie)
+-- If received request has request with cookie assigned by remote site, proxy request back using remote_pool.
+-- request only will be proxied if remote_pool is up, meaning remote dc is up
+if (avi.http.cookie_exists(remote_site_server_persistence_cookie_name) and remote_pool_servers_up_count >= 1) or local_pool_servers_up_count < 1  then
+  avi.pool.select(remote_pool)
 end
 ```
