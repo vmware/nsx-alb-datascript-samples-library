@@ -7,7 +7,7 @@
 [HTTP URI Switching - Simple](availability/uri_switching.md)  
 [HTTP URI Switching - Advanced](availability/uri_switching2.md)  
 [HTTP IP Switching](availability/ip_switching.md)  
-[HTTP Content Switch based on HTTP POST / REQUEST DATA](content_switch_based_on_http_request_data.md)  
+[HTTP Content Switch based on HTTP POST / REQUEST DATA](availability/content_switch_based_on_http_request_data.md)  
 ## Availability
 
 [HTTP Retry 500 Errors](availability/http_retry_500_error.md)  
