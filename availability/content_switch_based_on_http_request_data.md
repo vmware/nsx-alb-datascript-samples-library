@@ -20,12 +20,12 @@ if avi.http.method() == "POST" then
             server_port = match:match("(%d+)")
         end
     end
-    local_pool_contains_pool_server_address = pcall(avi.pool.select,local_pool,server_ip)
-    remote_pool_contains_pool_server_address = pcall(avi.pool.select,remote_pool,server_ip)
+    local_pool_contains_pool_server_address = pcall(avi.pool.select,local_pool,server_ip,server_port)
+    remote_pool_contains_pool_server_address = pcall(avi.pool.select,remote_pool,server_ip,server_port)
     if local_pool_contains_pool_server_address then
-        avi.pool.select(local_pool,server_ip)
+        avi.pool.select(local_pool,server_ip,server_port)
     elseif remote_pool_contains_pool_server_address then
-        avi.pool.select(remote_pool,server_ip)
+        avi.pool.select(remote_pool,server_ip,server_port)
     end
 end
 ```
