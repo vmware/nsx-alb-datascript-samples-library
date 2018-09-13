@@ -54,6 +54,8 @@
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
 
+## Rate Limiting
+[Add Custom Headers to Local Response](rate_limit/add_headers_to_local_response.md)
 ## Troubleshooting
 [Log SSL Version](security/log_ssl_version.md)  
 [Log HTTP Headers](security/log_http_headers.md)  
