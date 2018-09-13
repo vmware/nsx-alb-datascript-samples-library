@@ -8,9 +8,10 @@ Solution C:
 2. There are two pools has to be defined per site local_pool and remote_pool:
    * local_pool will serve new requests or existing requests based on site_cookie lookup
    * remote_pool will serve exists requests based on site_cookie lookup or serve new requests if local_pool does not have any active members
+   * there is requirement that site1/local_pool has to have the same pool members as site2/remote_pool and vice versa.
 3. There are list of health checks built-in:
-   a. to avoid redirecting request to site with no active servers
-   b. to avoid attaching cookie for local processing if there are no local_pool members up
+   * to avoid redirecting request to site with no active servers
+   * to avoid attaching cookie for local processing if there are no local_pool members up
 
 ```lua
 -- HTTP_REQ

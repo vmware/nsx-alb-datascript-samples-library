@@ -10,8 +10,18 @@ This is only datascript example, the functionality below can be done through HTT
 ```lua
 --HTTP_REQUEST
 restricted_methods = "MOVE,COPY,LOCK,UNLOCK,PROPFIND,PROPPATCH,MKCOL"
+non_http_methods = "CONNECT"
 event_method = avi.http.method()
 if string.contains(restricted_methods, event_method) then
     avi.http.response("403")
+elseif string.contains(non_http_methods, event_method) then
+    avi.http.set_reqvar("disable_http_processing", true)
+end
+```
+
+```lua
+--HTTP_RESP
+if avi.http.get_reqvar("disable_http_processing") == true then
+   avi.http.disable()
 end
 ```
