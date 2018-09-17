@@ -55,9 +55,9 @@
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
 
 ## Rate Limiting
-[Setting up Rate Limiter to use in DataScript](rate_limit/set_up_DS_rate_limiter.md)
-[Add Custom Headers to Local Response](rate_limit/add_headers_to_local_response.md)
-[Enforce a Penalty Timeout for Blacklisted Clients](rate_limit/rate_limit_penalty_box.md)
+[Setting up Rate Limiter to use in DataScript](rate_limit/set_up_DS_rate_limiter.md)  
+[Add Custom Headers to Local Response](rate_limit/add_headers_to_local_response.md)  
+[Enforce a Penalty Timeout for Blacklisted Clients](rate_limit/rate_limit_penalty_box.md)  
 
 ## Troubleshooting
 [Log SSL Version](security/log_ssl_version.md)  
