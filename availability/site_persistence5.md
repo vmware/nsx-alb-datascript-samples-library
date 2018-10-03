@@ -78,10 +78,12 @@ end
 
 ```lua
 -- HTTP_RESP
+cookie_max_age = 3600
 if avi.vs.reqvar.set_cookie == 1 then
   site_cookie = avi.pool.server_ip().. ":" .. avi.vs.port()
   encrypted_site_cookie = avi.crypto.encrypt(site_cookie, avi.vs.reqvar.cookie_private_key)
-  encoded_site_cookie = avi.utils.base64_encode(encrypted_site_cookie)
-  avi.http.add_cookie (avi.vs.reqvar.site_persistence_cookie_name, encoded_site_cookie)
+  encoded_site_cookie = avi.utils.base64_encode(encrypted_site_cookie) 
+  cookie_table = {[avi.vs.reqvar.site_persistence_cookie_name]=encoded_site_cookie,maxage=cookie_max_age}
+  avi.http.add_cookie(cookie_table)
 end
 ```
