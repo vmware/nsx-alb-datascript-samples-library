@@ -42,3 +42,46 @@ if avi.vs.reqvar.header_value then
   end
 end
 ```
+
+Table insert leverage IP and Port only supported in versions 17.2.14/18.1.5 and above
+```lua
+-- HTTP_REQUEST
+default_pool = "primary_pool"
+header1 = avi.http.get_header('APM')
+header2 = avi.http.get_header('Authorization')
+
+if header1 then
+  avi.vs.reqvar.persist_value = header1
+elseif header2 then
+  avi.vs.reqvar.persist_value = header2
+end
+
+-- if header provided
+if avi.vs.reqvar.persist_value then
+  -- lookup server using value of provided header for existing mapping in persistence table
+  if avi.vs.table_lookup(avi.vs.reqvar.persist_value) then
+  -- split out the ip and port inside the table created
+    avi.vs.reqvar.pinned_server_ip, avi.vs.reqvar.pinned_server_port = string.match(avi.vs.table_lookup(avi.vs.reqvar.persist_value), "(%d+.%d+.%d+.%d+):(%d+)")
+  -- if server found in persistence table and it's up, use already pinned server
+    if avi.vs.reqvar.pinned_server_ip and avi.vs.reqvar.pinned_server_port and avi.pool.get_server_status(default_pool, avi.vs.reqvar.pinned_server_ip, tonumber(avi.vs.reqvar.pinned_server_port)) == 1 then
+      avi.pool.select(default_pool, avi.vs.reqvar.pinned_server_ip, tonumber(avi.vs.reqvar.pinned_server_port))
+    end
+  end
+else
+  avi.pool.select(default_pool)
+end
+```
+
+```lua
+-- HTTP_RESPONSE
+if avi.vs.reqvar.persist_value then
+  if avi.vs.reqvar.pinned_server_ip and avi.vs.reqvar.pinned_server_port then
+    -- Update the expire time for a table entry for 20 minutes for active connection i.e. existing persistence entry
+    avi.vs.table_refresh(avi.vs.reqvar.persist_value, 7200)
+  else
+    selected_server_ip, selected_server_port = avi.pool.get_server_info()
+    -- Create persistence entry for 20 minutes based on header value
+    avi.vs.table_insert(avi.vs.reqvar.persist_value, selected_server_ip..":"..selected_server_port, 7200)
+  end
+end
+```
