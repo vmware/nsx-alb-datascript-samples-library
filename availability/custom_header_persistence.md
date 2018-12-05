@@ -1,4 +1,5 @@
 # Custom Header Persistence
+## Solution 1
 Example is based on True-Client-IP header, the same principles can apply to Cookie persistence.
 Akamai's	True-Client-IP	header	is	way	to	recognize	actual Client	IP for	all	traffic	routed	through
 Akamai	regional	servers.	Akamai	inserts	this	header	in	each	request	with	a	value	of the	original	user's	IP
@@ -8,6 +9,7 @@ Persistence can be easily done through REST/UI/CLI: https://avinetworks.com/docs
 
 Apply these scripts to the "HTTP REQUEST" & "HTTP RESPONSE" events appropriately ,pool has to be selected for datascript.
 
+ 
 ```lua
 -- HTTP_REQUEST
 default_pool = "primary_pool"
@@ -42,6 +44,8 @@ if avi.vs.reqvar.header_value then
   end
 end
 ```
+
+## Solution 2
 
 Custom Header Persistence based on supplied headers with downgrade to IP persistence if 'header1' or 'header2' is not provided. The datascript is leveraging avi.pool.get_server_info(), function got introduced since 17.2.14, 18.1.5 releases.
 
