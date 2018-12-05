@@ -43,11 +43,12 @@ if avi.vs.reqvar.header_value then
 end
 ```
 
-Table insert leverage IP and Port only supported in versions 17.2.14/18.1.5 and above
+Custom Header Persistence based on supplied headers with downgrade to IP persistence if 'header1' or 'header2' is not provided. The datascript is leveraging avi.pool.get_server_info(), function got introduced since 17.2.14, 18.1.5 releases.
+
 ```lua
 -- HTTP_REQUEST
 default_pool = "primary_pool"
-header1 = avi.http.get_header('APM')
+header1 = avi.http.get_header('Token')
 header2 = avi.http.get_header('Authorization')
 
 if header1 then
