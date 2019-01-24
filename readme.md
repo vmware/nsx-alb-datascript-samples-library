@@ -14,7 +14,7 @@
 [Fall back to secondary pool or custom maintenance page](availability/fall_back_to_secondary_pool_if_primary_pool_is_down_display_maint_page.md)  
 [Load Balancing during Maintenance Window](availability/load_balancing_during_maintenance.md)  
 [HTTP redirect based on Client location taken from source IP address](availability/http_redirect_based_on_client_country.md)  
-[GEO Location database lookup based on source IP](availability/client_geo_headers.md)
+[GEO Location database lookup based on source IP](availability/client_geo_headers.md)  
 [Rewrite	HTTP	redirect	response	from	301	to	302](availability/rewrite_http_redirect_response_from_301_302.md)  
 [Ratio	based	Load	Balancing](availability/ratio_based_load_balancing.md)  
 [Location header rewrite with non-standard port](availability/location_header_rewrite_with_nonstandard_port.md)  
