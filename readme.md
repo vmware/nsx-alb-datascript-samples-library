@@ -19,8 +19,8 @@
 [Ratio	based	Load	Balancing](availability/ratio_based_load_balancing.md)  
 [Location header rewrite with non-standard port](availability/location_header_rewrite_with_nonstandard_port.md)  
 [Prepend request path](availability/path_prepend.md)  
-[Append string(www) and redirect to http(s) host](availability/append_www_to_http_https_host.md)
-[Custom connection timeout for URI path / pool](availability/timeouts.md)
+[Append string(www) and redirect to http(s) host](availability/append_www_to_http_https_host.md)  
+[Custom connection timeout for specific URI path or pool](availability/timeouts.md)  
 
 ## Persistence
 
@@ -31,7 +31,6 @@
 [Site Persistence using Cookie - Solution C](availability/site_persistence5.md)  
 [Site Persistence Leveraging Server Persistence Cookie for Two Sites Scenario](availability/site_persistence3.md)  
 [Persistence using URI with options for timeout](availability/uri_persistence.md)  
-
 
 ## Security
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  
