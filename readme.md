@@ -20,6 +20,7 @@
 [Location header rewrite with non-standard port](availability/location_header_rewrite_with_nonstandard_port.md)  
 [Prepend request path](availability/path_prepend.md)  
 [Append string(www) and redirect to http(s) host](availability/append_www_to_http_https_host.md)
+[Custom connection timeout for URI path / pool](availability/timeouts.md)
 
 ## Persistence
 
