@@ -5,8 +5,6 @@ Connection timeout is defined within network profile (TCP Proxy profile > Idle T
 ```lua
 -- HTTP_REQUEST
 if string.beginswith(avi.http.get_path(), "/special/") then
-   -- 3600 seconds is Avi's default timeout client timeout
-   -- Uncomment the following line and change the time (ms) if needed
    avi.http.set_server_timeout(3600000)
    avi.pool.select("special_pool")
 else
