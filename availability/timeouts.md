@@ -1,4 +1,4 @@
-# Custom connection timeout for URI path / pool
+# Custom connection timeout for specific URI path or pool
 
 Connection timeout is defined within network profile (TCP Proxy profile > Idle Timeout) as part of virtual service configuration, however can be customized further leveraging datascript. DDoS > HTTP Keep-Alive Timeout under Application Profile can be used to ensure Keep-Alives are sent to the client and the client does not prematurely close out the connection to Avi. 
 
