@@ -8,6 +8,8 @@
 [HTTP URI Switching - Advanced](availability/uri_switching2.md)  
 [HTTP IP Switching](availability/ip_switching.md)  
 [HTTP Content Switch based on HTTP POST / REQUEST DATA](availability/content_switch_based_on_http_request_data.md)  
+[HTTP URI Switching using String Groups - Advanced](availability/uri_switching3.md)  
+
 ## Availability
 
 [HTTP Retry 500 Errors](availability/http_retry_500_error.md)  
@@ -22,7 +24,7 @@
 [Append string(www) and redirect to http(s) host](availability/append_www_to_http_https_host.md)  
 [Custom connection timeout for specific URI path or pool](availability/timeouts.md)    
 [Overwrite single HTTP query option from the existing set of query options - Advanced](availability/overwrite_http_query1.md)  
-[HTTP URI Switching using String Groups - Advanced](availability/uri_switching3.md)  
+
 ## Persistence
 
 [Header Persistence](availability/custom_header_persistence.md)  
