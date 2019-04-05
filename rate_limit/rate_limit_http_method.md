@@ -1,4 +1,4 @@
-#Rate limit using HTTP headers
+# Rate limit using HTTP headers
 
 Datascript will rate limit based off http header attributes.
 The action is set to log when if limit is reached
