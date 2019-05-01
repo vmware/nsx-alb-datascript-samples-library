@@ -1,6 +1,6 @@
 # HTTP URI Switching using String Groups - Advanced
 
-Leverage StringGroup defined dict to redirect the requests from existing url to new url. StrinGroup type is KEYVAL, where the key is current url and value is new url (to be redirected to). StringGroup "urls_stringgroup" has to be attached to datascript.
+Leverage StringGroup defined dict to redirect the requests from existing url to new url. StringGroup type is KEYVAL, where the key is current url and value is new url (to be redirected to). StringGroup "urls_stringgroup" has to be attached to datascript.
 
 ```lua
 -- HTTP_REQUEST
