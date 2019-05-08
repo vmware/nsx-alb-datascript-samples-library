@@ -2,7 +2,7 @@
 The script extracts a SAML attribute of interest and provides it as Header as well as Avi Logging attribute. Starting 18.2.4 string.split() function can be used for ease of string parsing.
 
 ```lua
-saml_attr_name='EmailAddress'
+saml_attr_name='SAML_USERID'
 header_saml_name='X-SAML-User'
 
 saml_attrs = avi.http.saml_session_decrypt()
