@@ -57,6 +57,7 @@
 [Remove X-* and Server Headers from Response](security/remove_x_headers_from_http_resp.md)  
 [Close Connections without Host header](security/close_connection_without_host.md)  
 [Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
+[Retrieve SAML Attribute from session cookie and expose it as Header and as Avi Logging attribute](security/saml_attrs.md)   
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
 
