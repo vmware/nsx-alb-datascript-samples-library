@@ -46,18 +46,22 @@
 [Controlling Bots](security/controlling_bots.md)  
 [Cross	Origin	Resource	Sharing	Implementation](security/cors.md)  
 [Parse and Log Username from HTTP requests](security/parse_and_log_username_from_http_req.md)  
-[Retrieve SAML Attribute from session cookie and expose it as Header and as Avi Logging attribute](security/saml_attrs.md)   
+[Retrieve SAML Attribute from session cookie and expose it as Header and as Avi Logging attribute](security/saml_attrs.md)
+[Client SSL Certificate Validation with Header Insertion](security/irule_Client_Auth.md)
+
 ### Security - Cookie
 [Validate String Characters in Cookie / Cookie Sanitizer](security/validate_string_characters_in_cookie.md)  
 [Cookie Encryption Gateway](security/cookie_encryption_gateway.md)  
-[Cookie Rewrite / Cookie Sanitizer](security/cookie_rewrite.md)  
+[Cookie Rewrite / Cookie Sanitizer](security/cookie_rewrite.md)
+
 ### Security - Header
 [X-Forwarded-For Header Insert](security/x_forwarded_for_header_insert.md)  
 [X-Client-IP allow requests from range of IPs](security/x_client_allow_request_from_range_of_ips.md)  
 [Header Insertion for Content Security](security/header_insertion_for_content_security.md)  
 [Remove X-* and Server Headers from Response](security/remove_x_headers_from_http_resp.md)  
 [Close Connections without Host header](security/close_connection_without_host.md)  
-[Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
+[Redirect	Location	header	validator](security/redirect_location_header_validator.md)
+
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
 
