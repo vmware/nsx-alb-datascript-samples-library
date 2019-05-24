@@ -23,7 +23,7 @@
 [Prepend request path](availability/path_prepend.md)  
 [Append string(www) and redirect to http(s) host](availability/append_www_to_http_https_host.md)  
 [Custom connection timeout for specific URI path or pool](availability/timeouts.md)    
-[Overwrite single HTTP query option from the existing set of query options - Advanced](availability/overwrite_http_query1.md)  
+[Rewrite single HTTP query option from the existing set of query options - Advanced](availability/overwrite_http_query1.md)  
 
 ## Persistence
 
