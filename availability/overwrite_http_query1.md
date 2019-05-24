@@ -1,4 +1,4 @@
-# Overwrite single HTTP query option from the existing set of query options - Advanced
+# Rewrite single HTTP query option from the existing set of query options - Advanced
 
 The original url https://demo.avinetworks.com/path1/index.html?fruits=oranges&type=organic&origin=us to be transformed for pool member consumption to https://demo.avinetworks.com/path1/index.html?fruits=apples&type=organic&origin=us
 
