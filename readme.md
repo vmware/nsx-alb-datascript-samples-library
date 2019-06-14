@@ -24,7 +24,7 @@
 [Append string(www) and redirect to http(s) host](availability/append_www_to_http_https_host.md)  
 [Custom connection timeout for specific URI path or pool](availability/timeouts.md)    
 [Rewrite single HTTP query option from the existing set of query options - Advanced](availability/overwrite_http_query1.md)  
-[URI Encoding Function](availiability/uri_encode.md)  
+[URI Encoding Function](availability/uri_encode.md)  
 
 ## Persistence
 
