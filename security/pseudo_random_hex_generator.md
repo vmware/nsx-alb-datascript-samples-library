@@ -1,6 +1,7 @@
 # Pseudo-random	hex	character	generator
 Pseudo-random	hex	characters can	be	used	in	the	authentication	and	validation	flow	across
-the	ADC	and	Client/Server.	The	hex	characters	can	be	used	for	different	purposes	as	well
+the	ADC	and	Client/Server.	The	hex	characters	can	be	used	for	different	purposes	as	well.
+Starting 18.2.4 avi.utils.rand_bytes(num_bytes) function was introduced. This API allows users to generate cryptographically secure random bytes of data.
 
 ```lua
 local charset = {}  do
