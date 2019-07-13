@@ -39,7 +39,7 @@ The example outlines how to integrate existing proxy.pac file to DataScript Lua 
 
     function FindProxyForURL(url, host) {
       if (isPlainHostName(host) ||
-          dnsDomainIs(host, ".avinetworks.com) ||
+          dnsDomainIs(host, ".avinetworks.com") ||
           isInNet(host, "192.168.0.0", "255.255.0.0")) {
         return "DIRECT";
       } else {
