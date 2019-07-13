@@ -25,6 +25,7 @@
 [Custom connection timeout for specific URI path or pool](availability/timeouts.md)    
 [Rewrite single HTTP query option from the existing set of query options - Advanced](availability/overwrite_http_query1.md)  
 [URI Encoding Function](availability/uri_encode.md)  
+[Managing Proxy Auto-Configuration (PAC) file](availability/proxy_pac.md)   
 
 ## Persistence
 
