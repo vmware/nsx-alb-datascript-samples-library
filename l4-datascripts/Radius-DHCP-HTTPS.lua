@@ -1,4 +1,4 @@
-```
+
 local parse_radius=require 'Default-Radius'
 local parse_dhcp=require 'Default-DHCP'
 local dictionary= {}
@@ -79,7 +79,6 @@ local function keysel()
   
   if (nas_port_type == 19) then
     timeout  = 3600
-    avi.vs.debuglog("timeout"..timeout)
   end
   
   return key, timeout, prefix, framed_ip  
@@ -154,7 +153,6 @@ elseif (vip_port == "1813") then
 
 -----radius authentication(1812) parsing-------
 elseif (vip_port=="1812") then
- avi.vs.debuglog("!!! I'm at 1812")
  key, timeout, prefix, framed_ip = keysel()
  hash = hashfunction(key,prefix)
 
@@ -181,4 +179,4 @@ elseif (vip_port=="1812") then
    end
 end
 avi.l4.ds_done()
-```
+
