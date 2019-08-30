@@ -56,7 +56,7 @@ end
 
 ---- keyselect for radius 1812 and 1813 ---- 
 local function keysel()  
-  if (vip_port ~= "1813" and vip_port ~= "1812") then
+  if (vip_port ~= "1813" and vip_port ~= "1812" vip_port ~= "1645" and vip_port ~="1646") then
     return 
   end
 
@@ -122,7 +122,7 @@ elseif (vip_port == "443") then
        end
 
 ----- radius 1813 parsing ---
-elseif (vip_port == "1813") then
+elseif (vip_port == "1813" or vip_port=="1646") then
     key, timeout, prefix, framed_ip  = keysel()
     hash = hashfunction(key,prefix)
     health, server = fetch_healthy_server(hash)
@@ -152,7 +152,7 @@ elseif (vip_port == "1813") then
     return 
 
 -----radius authentication(1812) parsing-------
-elseif (vip_port=="1812") then
+elseif (vip_port=="1812" or vip_port=="1645") then
  key, timeout, prefix, framed_ip = keysel()
  hash = hashfunction(key,prefix)
 
