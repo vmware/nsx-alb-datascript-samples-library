@@ -56,7 +56,7 @@ end
 
 ---- keyselect for radius 1812 and 1813 ---- 
 local function keysel()  
-  if (vip_port ~= "1813" and vip_port ~= "1812" vip_port ~= "1645" and vip_port ~="1646") then
+  if (vip_port ~= "1813" and vip_port ~= "1812" and vip_port ~= "1645" and vip_port ~="1646") then
     return 
   end
 
