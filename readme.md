@@ -52,7 +52,7 @@
 [Cross	Origin	Resource	Sharing	Implementation](security/cors.md)  
 [Parse and Log Username from HTTP requests](security/parse_and_log_username_from_http_req.md)  
 [Retrieve SAML Attribute from session cookie and expose it as Header and as Avi Logging attribute](security/saml_attrs.md)  
-[Client SSL Certificate Validation with Header Insertion](security/irule_Client_Auth.md)
+[Client SSL Certificate Validation with Header Insertion](security/irule_Client_Auth.md)  
 [Generate Custom Session ID based on time, ip address and GET request id hash value](security/generate_session_id.md)  
 
 ### Security - Cookie
