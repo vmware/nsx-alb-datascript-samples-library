@@ -11,10 +11,10 @@ end
 -- HTTP_RESP
 if avi.vs.reqvar.session_id_exists == false then
   ip = avi.vs.ip()
-  rnum = avi.utils.sha1_hash(avi.http.get_request_id())
+  req_id = avi.utils.sha1_hash(avi.http.get_request_id())
   now = os.time()
-  newaddr = ip .. ":" .. string.sub(rnum,1,8) .. ":"  .. tostring(now)
-  cookie_table = { session_id=newaddr, secure=true }
+  id = ip .. ":" .. string.sub(req_id,1,8) .. ":"  .. tostring(now)
+  cookie_table = { session_id=id, secure=true }
   avi.http.add_cookie(cookie_table)
 end
 ```
