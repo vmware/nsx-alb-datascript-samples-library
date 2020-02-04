@@ -37,6 +37,7 @@ when HTTP_RESPONSE {
 ## Avi Datascript to add SameSite attribute
 
 ```lua
+-- HTTP_RESPONSE
 headers = avi.http.get_header()
 avi.http.remove_header("Set-Cookie")
 for k, v in pairs(headers) do
