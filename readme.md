@@ -54,6 +54,7 @@
 [Retrieve SAML Attribute from session cookie and expose it as Header and as Avi Logging attribute](security/saml_attrs.md)  
 [Client SSL Certificate Validation with Header Insertion](security/irule_Client_Auth.md)  
 [Generate Custom Session ID based on time, ip address and GET request id hash value](security/generate_session_id.md)  
+[Add SameSite attribute to Cookies that do not have it](security/add_samesite_cookie.md) 
 
 ### Security - Cookie
 [Validate String Characters in Cookie / Cookie Sanitizer](security/validate_string_characters_in_cookie.md)  
