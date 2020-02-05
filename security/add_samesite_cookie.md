@@ -43,7 +43,7 @@ avi.http.remove_header("Set-Cookie")
 for k, v in pairs(headers) do
 	if (k == "set-cookie") then
 		for key, val in pairs(v) do
-			--only modify if header does not have SameSite attribute
+			--only modify if Set-Cookie header does not have SameSite attribute
 			if	string.contains(string.lower(val), "samesite") then
 				avi.http.add_header("Set-Cookie", val)
 			else
