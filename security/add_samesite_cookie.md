@@ -41,15 +41,24 @@ when HTTP_RESPONSE {
 headers = avi.http.get_header()
 avi.http.remove_header("Set-Cookie")
 for k, v in pairs(headers) do
-	if (k == "set-cookie") then
-		for key, val in pairs(v) do
-			--only modify if Set-Cookie header does not have SameSite attribute
-			if	string.contains(string.lower(val), "samesite") then
-				avi.http.add_header("Set-Cookie", val)
-			else
-				avi.http.add_header("Set-Cookie", val ..", samesite=None; secure;")
-			end
-		end
-	end
+    if (k == "set-cookie") then
+        if (type(v) == "string") then
+            -- If there's only one SameSite cookie header then v is a string
+            -- v needs to be converted to a table
+            v = {v}
+        end
+
+        for key, val in pairs(v) do
+            -- only modify if Set-Cookie header does not have SameSite attribute
+            new_val = val
+            if not string.contains(string.lower(val), "samesite") then
+                new_val = val .."; samesite=None"
+            end
+            if not string.contains(string.lower(new_val), "secure") then
+                new_val = new_val .."; secure"
+            end
+            avi.http.add_header("Set-Cookie", new_val)
+        end
+    end
 end
 ```
