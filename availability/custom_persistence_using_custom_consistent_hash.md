@@ -1,6 +1,6 @@
 # Load Balance/Persist using Custom Consistent Hash
 
-The example below will leverage custom string such as parameter "sessionid" or header "X-Session-Id" in combination with Load Balance Algorithm "Consistent Hash using Custom String" to perform a load balancing decision.
+The example below will leverage a custom string such as a parameter "sessionid" or a header "X-Session-Id" in a combination with Load Balance Algorithm "Consistent Hash using Custom String" to perform a load balancing decision.
 
 ```lua
 query = avi.http.get_query("sessionid")
