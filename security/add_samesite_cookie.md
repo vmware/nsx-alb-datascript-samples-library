@@ -1,6 +1,6 @@
 # Add SameSite attribute to Cookies that do not have it
 
-Here is iRule and Avi Datascript which can handle multiple Set-Cookie headers in a response.  If a Set-Cookie header already has SameSite attribute present, it is passed through unmodified.
+Here is iRule and DataScript which can handle multiple Set-Cookie headers in a response.  If a Set-Cookie header already has SameSite attribute present, it is passed through unmodified.
 
 ## iRule to add SameSite attribute
 
@@ -34,7 +34,7 @@ when HTTP_RESPONSE {
 }
 ```
 
-## Avi Datascript to add SameSite attribute
+## DataScript to add SameSite attribute
 
 ```lua
 -- HTTP_RESPONSE
