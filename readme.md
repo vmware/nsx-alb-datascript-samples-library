@@ -39,6 +39,7 @@
 [Site Persistence using Cookie - Solution C](availability/site_persistence5.md)  
 [Site Persistence Leveraging Server Persistence Cookie for Two Sites Scenario](availability/site_persistence3.md)  
 [Persistence using URI with options for timeout](availability/uri_persistence.md)  
+[Load Balance/Persist using Custom Consistent Hash](availability/custom_persistence_using_custom_consistent_hash.md)  
 
 ## Security
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  
