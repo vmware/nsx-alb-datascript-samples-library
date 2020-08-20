@@ -68,8 +68,8 @@
 [Header Insertion for Content Security](security/header_insertion_for_content_security.md)  
 [Remove X-* and Server Headers from Response](security/remove_x_headers_from_http_resp.md)  
 [Close Connections without Host header](security/close_connection_without_host.md)  
-[Redirect	Location	header	validator](security/redirect_location_header_validator.md)
-[Let's Encrypt Server chanllange response](security/let's_Encrypt_Response.md)
+[Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
+[Let's Encrypt Server chanllange response](security/let's_Encrypt_Response.md)  
 
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
