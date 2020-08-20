@@ -70,6 +70,7 @@
 [Close Connections without Host header](security/close_connection_without_host.md)  
 [Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
 [Let's Encrypt Server chanllange response](security/let's_Encrypt_Response.md)  
+[True Client IP on Header](security/true_client_ip.md)  
 
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
