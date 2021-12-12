@@ -19,15 +19,17 @@ local function check_for_attack (location, value)
 end
 
 local function check_table(location, table)
-    for name, value in pairs(table) do
-       check_for_attack(location, name)
-       if type(value) == "table" then
-           for index, value in pairs(value) do
+    if table then
+        for name, value in pairs(table) do
+           check_for_attack(location, name)
+           if type(value) == "table" then
+               for index, value in pairs(value) do
+                   check_for_attack(location .. "." .. name, value)
+               end
+           else
                check_for_attack(location .. "." .. name, value)
            end
-       else
-           check_for_attack(location .. "." .. name, value)
-       end
+        end
     end
 end
 
