@@ -12,7 +12,7 @@ local function check_for_attack (location, value)
       avi.http.response(400)
     end
     -- detect evasion
-    if string.contains(lower, "${j${") or string.contains(lower, "${jn${") or string.contains(lower, "${jnd${") or string.contains(lower, "${jndi${") then
+    if string.contains(lower, "${${") or string.contains(lower, "${j${") or string.contains(lower, "${jn${") or string.contains(lower, "${jnd${") or string.contains(lower, "${jndi${") then
           avi.vs.log("CVE-2021-44228 Log4j attack (evasion attempt) detected at " .. location)
           avi.http.response(400)
     end
