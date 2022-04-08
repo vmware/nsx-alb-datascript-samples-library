@@ -11,8 +11,8 @@
 [HTTP URI Switching using String Groups - Advanced](availability/uri_switching3.md)  
 
 ## L4 Traffic Management
-
-
+[SNI Based Content Switching L4 SSL Offload](l4/sni_based_content_switching_l4_ssl_offload.md)    
+[SNI Based Content Switching L4 Passthrough](l4/sni_based_content_switching_l4_passthrough.md)
 ## Availability
 
 [HTTP Retry 500 Errors](availability/http_retry_500_error.md)  
