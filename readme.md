@@ -29,6 +29,7 @@
 [Rewrite single HTTP query option from the existing set of query options - Advanced](availability/overwrite_http_query1.md)  
 [URI Encoding Function](availability/uri_encode.md)  
 [Managing Proxy Auto-Configuration (PAC) file](availability/proxy_pac.md)   
+[TLS Version Check with HTML Page Response](availability/tls_version_1.2_with_html_response.md)  
 
 ## Persistence
 
@@ -57,11 +58,13 @@
 [Generate Custom Session ID based on time, ip address and GET request id hash value](security/generate_session_id.md)  
 [Add SameSite attribute to Cookies that do not have it](security/add_samesite_cookie.md)  
 [Check For log4j Attacks (CVE-2021-44228)](security/check_for_log4j_attacks.md)  
+[TLS version and IP address group check](security/tls_version_ip_group.md)  
 
 ### Security - Cookie
 [Validate String Characters in Cookie / Cookie Sanitizer](security/validate_string_characters_in_cookie.md)  
 [Cookie Encryption Gateway](security/cookie_encryption_gateway.md)  
-[Cookie Rewrite / Cookie Sanitizer](security/cookie_rewrite.md)
+[Cookie Rewrite / Cookie Sanitizer](security/cookie_rewrite.md)   
+[Update Cookie Domain](security/update_cookie_domain.md)
 
 ### Security - Header
 [X-Forwarded-For Header Insert](security/x_forwarded_for_header_insert.md)  
@@ -72,6 +75,7 @@
 [Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
 [Let's Encrypt Server chanllange response](security/let's_Encrypt_Response.md)  
 [True Client IP on Header](security/true_client_ip.md)  
+[Add Pool Server IP Header](security/add_pool_server_ip.md)  
 
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
