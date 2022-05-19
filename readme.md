@@ -77,7 +77,7 @@
 [Let's Encrypt Server chanllange response](security/let's_Encrypt_Response.md)  
 [True Client IP on Header](security/true_client_ip.md)  
 [Add Pool Server IP Header](security/add_pool_server_ip.md)   
-[True Client IP replace X-Forwarded-For (XFF)](security/add_pool_server_ip.md)   
+[True Client IP replace X-Forwarded-For (XFF)](security/true_client_IP_replacement.md)   
 
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
