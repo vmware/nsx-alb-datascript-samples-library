@@ -1,6 +1,6 @@
 # TLS Version and IP Group
 
-Match the TLS version and if IP address is not present on IP address group, drop the request. Loggins is apart of native Avi functionality
+Match the TLS version and if IP address is not present on IP address group, drop the request.
 
 ## F5 TLS Version and IP Group Match
 
