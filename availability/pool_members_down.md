@@ -1,8 +1,8 @@
-# Pool Members Down
+# Check URI, server count and respond 503
 
 Match the HTTP URI and if the active pool members in the pool is less than 1, respond with HTTP 503 message.
 
-## F5 Pool Members Down
+## F5 Check URI, server count and respond 503
 
 ```
 when HTTP_REQUEST {
@@ -17,7 +17,7 @@ when HTTP_REQUEST {
 }
 ```
 
-## Avi Pool Members Down
+## Avi Check URI, server count and respond 503
 
 ```lua
 path = avi.http.get_path()
