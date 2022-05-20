@@ -30,7 +30,6 @@
 [URI Encoding Function](availability/uri_encode.md)  
 [Managing Proxy Auto-Configuration (PAC) file](availability/proxy_pac.md)   
 [TLS Version Check with HTML Page Response](availability/tls_version_1.2_with_html_response.md)   
-[Check URI, server count, and respond 503](availability/pool_members_down.md)  
 
 ## Persistence
 
