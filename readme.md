@@ -29,7 +29,7 @@
 [Rewrite single HTTP query option from the existing set of query options - Advanced](availability/overwrite_http_query1.md)  
 [URI Encoding Function](availability/uri_encode.md)  
 [Managing Proxy Auto-Configuration (PAC) file](availability/proxy_pac.md)   
-[TLS Version Check with HTML Page Response](availability/tls_version_1.2_with_html_response.md)  
+[TLS Version Check with HTML Page Response](availability/tls_version_1.2_with_html_response.md)   
 
 ## Persistence
 
@@ -75,7 +75,8 @@
 [Redirect	Location	header	validator](security/redirect_location_header_validator.md)  
 [Let's Encrypt Server chanllange response](security/let's_Encrypt_Response.md)  
 [True Client IP on Header](security/true_client_ip.md)  
-[Add Pool Server IP Header](security/add_pool_server_ip.md)  
+[Add Pool Server IP Header](security/add_pool_server_ip.md)   
+[True Client IP replace X-Forwarded-For (XFF)](security/true_client_IP_replacement.md)   
 
 ## Acceleration
 [Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
