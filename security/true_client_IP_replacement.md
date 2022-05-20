@@ -22,7 +22,7 @@ when HTTP_REQUEST {
 
 ```lua
 if avi.http.get_header("True-Client-IP") then
-avi.http.replace_header("X-Forwarded-For", "True-Client-IP")
+      avi.http.replace_header("X-Forwarded-For", "True-Client-IP")
 else avi.http.replace_header("X-Forwarded-For", avi.vs.client_ip())
 end
 ```
