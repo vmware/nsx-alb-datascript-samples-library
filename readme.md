@@ -1,16 +1,17 @@
 # DataScript Examples
 
 ## Content Switching
-[HTTP Host Switching](availability/host_switching.md)  
-[HTTP Host Switching using Host Header](availability/host_switching2.md)  
-[HTTP Host Switching using Host Header and String Groups](availability/host_switching3.md)  
-[HTTP URI Switching - Simple](availability/uri_switching.md)  
-[HTTP URI Switching - Advanced](availability/uri_switching2.md)  
-[HTTP IP Switching](availability/ip_switching.md)  
-[HTTP Content Switch based on HTTP POST / REQUEST DATA](availability/content_switch_based_on_http_request_data.md)  
-[HTTP URI Switching using String Groups - Advanced](availability/uri_switching3.md)  
+[HTTP Host Switching](content_switching/host_switching.md)  
+[HTTP Host Switching using Host Header](content_switching/host_switching2.md)  
+[HTTP Host Switching using Host Header and String Groups](content_switching/host_switching3.md)  
+[HTTP URI Switching - Simple](content_switching/uri_switching.md)  
+[HTTP URI Switching - Advanced](content_switching/uri_switching2.md)  
+[HTTP IP Switching](content_switching/ip_switching.md)  
+[HTTP Content Switch based on HTTP POST / REQUEST DATA](content_switching/content_switch_based_on_http_request_data.md)  
+[HTTP URI Switching using String Groups - Advanced](content_switching/uri_switching3.md)  
 
 ## L4 Traffic Management
+[Radius-DHCP-HTTPS](l4/Radius-DHCP-HTTPS.lua)
 [SNI Based Content Switching L4 SSL Offload](l4/sni_based_content_switching_l4_ssl_offload.md)    
 [SNI Based Content Switching L4 Passthrough](l4/sni_based_content_switching_l4_passthrough.md)
 ## Availability
@@ -33,14 +34,14 @@
 
 ## Persistence
 
-[Header Persistence](availability/custom_header_persistence.md)  
-[JSessionID Persistence](availability/jsessionid_persistence.md)  
-[Site Persistence using Cookie - Solution A](availability/site_persistence.md)  
-[Site Persistence using Cookie - Solution B](availability/site_persistence2.md)  
-[Site Persistence using Cookie - Solution C](availability/site_persistence5.md)  
-[Site Persistence Leveraging Server Persistence Cookie for Two Sites Scenario](availability/site_persistence3.md)  
-[Persistence using URI with options for timeout](availability/uri_persistence.md)  
-[Load Balance/Persist using Custom Consistent Hash](availability/custom_persistence_using_custom_consistent_hash.md)  
+[Header Persistence](persistence/custom_header_persistence.md)  
+[JSessionID Persistence](persistence/jsessionid_persistence.md)  
+[Site Persistence using Cookie - Solution A](persistence/site_persistence.md)  
+[Site Persistence using Cookie - Solution B](persistence/site_persistence2.md)  
+[Site Persistence using Cookie - Solution C](persistence/site_persistence5.md)  
+[Site Persistence Leveraging Server Persistence Cookie for Two Sites Scenario](persistence/site_persistence3.md)  
+[Persistence using URI with options for timeout](persistence/uri_persistence.md)  
+[Load Balance/Persist using Custom Consistent Hash](persistence/custom_persistence_using_custom_consistent_hash.md)  
 
 ## Security
 [HTTP to HTTPS Port Redirect](security/http_to_https_redirect.md)  
@@ -65,6 +66,7 @@
 [Cookie Encryption Gateway](security/cookie_encryption_gateway.md)  
 [Cookie Rewrite / Cookie Sanitizer](security/cookie_rewrite.md)   
 [Update Cookie Domain](security/update_cookie_domain.md)
+[Client Auth using cookies](security/client_auth_using_cookies.md)
 
 ### Security - Header
 [X-Forwarded-For Header Insert](security/x_forwarded_for_header_insert.md)  
@@ -79,7 +81,7 @@
 [True Client IP replace X-Forwarded-For (XFF)](security/true_client_IP_replacement.md)   
 
 ## Acceleration
-[Client Cache Control Behavior](availability/client_cache_control_behavior.md)  
+[Client Cache Control Behavior](acceleration/client_cache_control_behavior.md)  
 
 ## Rate Limiting
 [Setting up Rate Limiter to use in DataScript](rate_limit/set_up_DS_rate_limiter.md)  
