@@ -58,6 +58,7 @@
 [Client SSL Certificate Validation with Header Insertion](security/irule_Client_Auth.md)  
 [Generate Custom Session ID based on time, ip address and GET request id hash value](security/generate_session_id.md)  
 [Add SameSite attribute to Cookies that do not have it](security/add_samesite_cookie.md)  
+[Check For text4shell Attacks (CVE-2022-42889)](security/check_for_text4shell_attacks.md)   
 [Check For log4j Attacks (CVE-2021-44228)](security/check_for_log4j_attacks.md)  
 [TLS version and IP address group check](security/tls_version_ip_group.md)  
 
