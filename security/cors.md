@@ -18,6 +18,12 @@ there.
 ```lua
 -- HTTP_REQUEST
 origin_header= avi.http.get_header("Origin")
+-- Encode string to avoid being used for http smuggling attack
+function uri_encode(str)
+    return (str:gsub("([^%w-_.~])", function (c)
+        return string.format('%%%02X', string.byte(c))
+    end))
+end
 -- if Origin header exists and part of allowed_origins stringroup
 if origin_header then
   allowed_origin, allowed_origin_match= avi.stringgroup.beginswith("allowed_origins", origin_header)
@@ -29,7 +35,8 @@ if origin_header then
       avi.http.response(200, { Access_Control_Allow_Origin= origin_header,Access_Control_Allow_Methods= allowed_methods,Access_Control_Allow_Headers= access_control_request_method_header,Access_Control_Max_Age= "86400",Vary= "Origin"})
     else
     -- save origin header value to use in HTTP_RESPONSE event
-      avi.vs.reqvar.origin_header= origin_header
+    -- encode it before passing it to any other APIs
+      avi.vs.reqvar.origin_header= uri_encode(origin_header)
     end
   end
 end
