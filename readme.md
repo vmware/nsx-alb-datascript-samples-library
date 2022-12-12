@@ -66,7 +66,7 @@
 [Validate String Characters in Cookie / Cookie Sanitizer](security/validate_string_characters_in_cookie.md)  
 [Cookie Encryption Gateway](security/cookie_encryption_gateway.md)  
 [Cookie Rewrite / Cookie Sanitizer](security/cookie_rewrite.md)   
-[Update Cookie Domain](security/update_cookie_domain.md)
+[Update Cookie Domain](security/update_cookie_domain.md)  
 [Client Auth using cookies](security/client_auth_using_cookies.md)
 
 ### Security - Header
