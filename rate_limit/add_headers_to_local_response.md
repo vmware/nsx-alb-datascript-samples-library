@@ -1,14 +1,17 @@
 # Add Custom Headers to Local Response in Rate Limiting
 You can use the DataScript Rate Limit function to add your own custom headers to the
-Local Response that is sent by a rate limiter.
-For the script to work you need to set the "custom" rate limiter in the Application
-Profile.
+HTTP Response.
+For the script to work you need to add a rate limiter in the DataScript.
 
 The script below is written to emulate the VS Performance Rate Limiter. So all
 requests to a specific VS are rate limited.
 
+> The DS was tested under Avi version **21.1.3** and **22.1.1**
+
 ```lua
 -- Event: HTTP_REQUEST
+local rate_limiter = 'vs_rl'
+
 resp_headers = {["My-header"]="Header_Data", ["Content-type"]="text/html"}
 resp_body = [[
 <html>
@@ -20,8 +23,9 @@ resp_body = [[
 </html>
 ]]
 
-count_exceeded, action = avi.vs.rate_limit(avi.RL_CUSTOM_STRING, avi.vs.name(), true) -- or avi.vs.ip()
-if count_exceeded and action == avi.RL_ACTION_LOCAL_RSP then
-            avi.http.response(429, resp_headers , resp_body)
-            end
+exceeded = avi.vs.ratelimit.exceed(rate_limiter, avi.vs.name()) -- or avi.vs.ip()
+if exceeded then
+    avi.http.response(429, resp_headers , resp_body)
+end
+
 ```
