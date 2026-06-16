@@ -14,8 +14,8 @@
 [Radius-DHCP-HTTPS](l4/Radius-DHCP-HTTPS.lua)
 [SNI Based Content Switching L4 SSL Offload](l4/sni_based_content_switching_l4_ssl_offload.md)    
 [SNI Based Content Switching L4 Passthrough](l4/sni_based_content_switching_l4_passthrough.md)
-## Availability
 
+## Availability
 [HTTP Retry 500 Errors](availability/http_retry_500_error.md)  
 [Fall back to secondary pool or custom maintenance page](availability/fall_back_to_secondary_pool_if_primary_pool_is_down_display_maint_page.md)  
 [Load Balancing during Maintenance Window](availability/load_balancing_during_maintenance.md)  
@@ -33,7 +33,6 @@
 [TLS Version Check with HTML Page Response](availability/tls_version_1.2_with_html_response.md)   
 
 ## Persistence
-
 [Header Persistence](persistence/custom_header_persistence.md)  
 [JSessionID Persistence](persistence/jsessionid_persistence.md)  
 [Site Persistence using Cookie - Solution A](persistence/site_persistence.md)  
@@ -62,14 +61,14 @@
 [Check For log4j Attacks (CVE-2021-44228)](security/check_for_log4j_attacks.md)  
 [TLS version and IP address group check](security/tls_version_ip_group.md)  
 
-### Security - Cookie
+## Security - Cookie
 [Validate String Characters in Cookie / Cookie Sanitizer](security/validate_string_characters_in_cookie.md)  
 [Cookie Encryption Gateway](security/cookie_encryption_gateway.md)  
 [Cookie Rewrite / Cookie Sanitizer](security/cookie_rewrite.md)   
 [Update Cookie Domain](security/update_cookie_domain.md)  
 [Client Auth using cookies](security/client_auth_using_cookies.md)
 
-### Security - Header
+## Security - Header
 [X-Forwarded-For Header Insert](security/x_forwarded_for_header_insert.md)  
 [X-Client-IP allow requests from range of IPs](security/x_client_allow_request_from_range_of_ips.md)  
 [Header Insertion for Content Security](security/header_insertion_for_content_security.md)  
