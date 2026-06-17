@@ -11,8 +11,8 @@
 [HTTP URI Switching using String Groups - Advanced](content_switching/uri_switching3.md)  
 
 ## L4 Traffic Management
-[Radius-DHCP-HTTPS](l4/Radius-DHCP-HTTPS.lua)
-[SNI Based Content Switching L4 SSL Offload](l4/sni_based_content_switching_l4_ssl_offload.md)    
+[Radius-DHCP-HTTPS](l4/Radius-DHCP-HTTPS.lua)  
+[SNI Based Content Switching L4 SSL Offload](l4/sni_based_content_switching_l4_ssl_offload.md)  
 [SNI Based Content Switching L4 Passthrough](l4/sni_based_content_switching_l4_passthrough.md)
 
 ## Availability
