@@ -5,14 +5,19 @@ Here we need to define static value for response
 
 ```lua
 -- HTTP_REQUEST
-local uri = avi.http.get_uri()
-token = ' '
-for key in uri:gmatch("([^/]+)") do  
-    token = key
-  end
-resptoken = (token .. ".<Define Response Value>")
-avi.vs.log(resptoken)
-if avi.http.get_uri() == ("/well-known/acme-challenge/"..token) then
-    avi.http.response(200, { }, resptoken)
-end 
+-- Use get_path to ignore query strings
+local path = avi.http.get_path()
+
+-- Use match to extract the token. 
+-- Escape both '.' and '-' in the path
+-- Inside Brackets, %w represents all alphanumeric characters (%d%l%u), and - just represents the hyphen.
+local token = path:match("^/%.well%-known/acme%-challenge/([%w-]+)$")
+
+-- If a valid token is found, intercept and respond
+if token then
+    local resptoken = token .. ".<Define Response Value>"
+    
+    -- Respond with 200 OK and text/plain instead of text/html
+    avi.http.response(200, { content_type="text/plain" }, resptoken)
+end
 ```
