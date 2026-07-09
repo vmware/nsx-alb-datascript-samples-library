@@ -11,23 +11,25 @@ in application profile.
 -- detect CVE-2022-42889 Text4shell
 local function check_for_attack (location, value)
     if type(value) == "string" then
-        lower = string.lower(value)
-        if string.contains(lower, "${script:") then
-          avi.vs.log("CVE-2022-42889 Text4shell attack detected at " .. location)
-          avi.http.response(400)
-        end
-        if string.contains(lower, "${dns:") then
-          avi.vs.log("CVE-2022-42889 Text4shell attack detected at " .. location)
-          avi.http.response(400)
-        end
-        if string.contains(lower, "${url:") then
-          avi.vs.log("CVE-2022-42889 Text4shell attack detected at " .. location)
-          avi.http.response(400)
-        end
-        -- detect evasion
-        if string.match(lower, "${%a*${") then
-              avi.vs.log("CVE-2022-42889 Text4shell attack (evasion attempt) detected at " .. location)
+        if string.contains(value, "${") then
+            lower = string.lower(value)
+            if string.contains(lower, "${script:") then
+              avi.vs.log("CVE-2022-42889 Text4shell attack detected at " .. location)
               avi.http.response(400)
+            end
+            if string.contains(lower, "${dns:") then
+              avi.vs.log("CVE-2022-42889 Text4shell attack detected at " .. location)
+              avi.http.response(400)
+            end
+            if string.contains(lower, "${url:") then
+              avi.vs.log("CVE-2022-42889 Text4shell attack detected at " .. location)
+              avi.http.response(400)
+            end
+            -- detect evasion
+            if string.match(lower, "${%a*${") then
+                  avi.vs.log("CVE-2022-42889 Text4shell attack (evasion attempt) detected at " .. location)
+                  avi.http.response(400)
+            end
         end
     end
 end
