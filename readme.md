@@ -1,6 +1,24 @@
-# DataScript Examples
+# DataScript Use Case and Examples
 
-## Content Switching
+## Use Cases
+
+### [Out-of-Band Request Processing through DataScripts](usecases/Out-Of-Band-Request.md)
+
+### [HTTP Cookie Encryption Gateway](usecases/HTTP-Cookie-Encryption-Gateway.md)
+
+### [STARTTLS in Layer 4SSL Virtual Service](usecases/STARTTLS-in-Layer4-SSL-Virtual-Service.md)
+
+### [Conditional SNAT Support using L4 DataScript](usecases/Conditional-SNAT-Support.md)
+
+### [Custom Persistence with DataScript](usecases/Custom-Persistence-with-DataScript.md)
+
+### [Returning an Image with a DataScript](usecases/Returning-an-Image-with-a-DataScript.md)
+
+### [Custom Error Webpage for Avi Load Balancer-Generated Responses](usecases/Custom-Error-Webpage.md)
+
+## Examples
+
+### Content Switching
 [HTTP Host Switching](content_switching/host_switching.md)  
 [HTTP Host Switching using Host Header](content_switching/host_switching2.md)  
 [HTTP Host Switching using Host Header and String Groups](content_switching/host_switching3.md)  
@@ -94,5 +112,5 @@
 [Log HTTP Headers](security/log_http_headers.md)  
 
 ## Misc
-[Pseudo-random hex	character	generator](security/pseudo_random_hex_generator.md)  
+[Pseudo-random hex	character	generator](security/pseudo_random_hex_generator)  
 [Random Letter generator](security/random_letter_generator.md)  
